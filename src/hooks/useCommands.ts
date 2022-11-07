@@ -8,6 +8,9 @@ interface CommandStore {
   commandMap: Map<string, Command>;
   setCommandMap(map: CommandStore["commandMap"]): void;
 
+  commandDescMap: Map<string, string>;
+  setCommandDescMap(map: CommandStore["commandDescMap"]): void;
+
   entries: CommandEntry[];
   setEntries(entries: CommandEntry[]): void;
 }
@@ -21,6 +24,9 @@ const useCommandsStore = create<CommandStore>((set) => ({
   commandMap: new Map(),
   setCommandMap: (map) => set({ commandMap: map }),
 
+  commandDescMap: new Map(),
+  setCommandDescMap: (map) => set({ commandDescMap: map }),
+
   entries: DEFAULT_ENTRIES,
   setEntries: (entries) => set({ entries }),
 }));
@@ -28,14 +34,19 @@ const useCommandsStore = create<CommandStore>((set) => ({
 export function useCommands() {
   const state = useCommandsStore();
   const commandsArr = React.useMemo(() => Array.from(state.commandMap.keys()), [state.commandMap]);
+  const commandsDescArr = React.useMemo(() => Array.from(state.commandDescMap.keys()), [state.commandDescMap]);
 
   function handleNewCommand(args: string[], idx: number) {
-    const { commandName, commandArgs, isSudo } = getCommandName(args);
+    const { commandName, commandDesc, commandArgs, isSudo } = getCommandName(args);
     const fullCommand = isSudo ? `sudo ${commandName}` : commandName;
     const commandFunctionOptions = { command: commandName };
 
     if (commandName === "clear") {
       return state.setEntries([{ command: null, output: null, status: CommandStatus.Succeeded }]);
+    }
+
+    if (commandName === "startx") {
+      return window.location.href = "/gui.html";
     }
 
     if (commandName.trim() === "") {
@@ -62,6 +73,7 @@ export function useCommands() {
     const output = command.render({
       commands: commandsArr,
       command: commandName,
+      commandDesc: commandDesc,
     });
     _addCommandToEntries(idx, {
       status: CommandStatus.Succeeded,

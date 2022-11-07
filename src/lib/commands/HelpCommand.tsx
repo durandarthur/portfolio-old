@@ -2,18 +2,20 @@ import { Command, CommandRenderOptions } from "../Command";
 
 export default class HelpCommand extends Command {
   constructor() {
-    super({ name: "help" });
+    super({ name: "help", description: "Liste les commandes disponibles." });
   }
-
-  render({ commands }: CommandRenderOptions): string | JSX.Element {
+  
+  render({ commands, commandDescArr }: CommandRenderOptions): string | JSX.Element {
+    const commandList = ["bio","gui","help","socials"];
+    const descriptionList = ["Affiche ma biographie.","Change le site en interface graphique.","Liste les commandes disponibles.","Liste de mes liens sociaux."];
     return (
       <div>
         <div className="mt-3">
           <p className="underline">Commandes disponibles</p>
 
           <ul className="flex flex-col">
-            {commands.map((command) => (
-              <li key={command}>{command}</li>
+            {commandList.map((command, i) => (
+              <li key={command}><span className="underline leading-loose">{command}</span>{"\n" + descriptionList[i] + "\n"}</li>
             ))}
           </ul>
         </div>

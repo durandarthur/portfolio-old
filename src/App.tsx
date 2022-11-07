@@ -8,7 +8,9 @@ export default function App() {
   const commands = useCommands();
 
   const _loadCommands = React.useCallback(async () => {
-    commands.state.setCommandMap(await loadCommands());
+    const commandObject = await loadCommands();
+    commands.state.setCommandMap(commandObject.commandMap);
+    commands.state.setCommandDescMap(commandObject.commandDescMap);
   }, []); // eslint-disable-line
 
   React.useEffect(() => {

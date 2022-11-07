@@ -2,7 +2,7 @@ import { Command } from "../Command";
 
 export default class SocialsCommand extends Command {
   constructor() {
-    super({ name: "socials" });
+    super({ name: "socials", description: "Liste de mes liens sociaux." });
   }
 
   render(): string | JSX.Element {

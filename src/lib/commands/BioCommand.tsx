@@ -2,7 +2,7 @@ import { Command } from "../Command";
 
 export default class BioCommand extends Command {
   constructor() {
-    super({ name: "bio" });
+    super({ name: "bio", description: "Affiche ma biographie." });
   }
 
   render(): string | JSX.Element {
