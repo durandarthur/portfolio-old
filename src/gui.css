@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "RobotoMono";
+    src: url("../public/fonts/RobotoMono-Bold.ttf") format("truetype");
+}
+
+main section img {
+    width: 20vw;
+    height: auto;
+}
