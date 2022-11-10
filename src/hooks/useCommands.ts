@@ -73,7 +73,7 @@ export function useCommands() {
     const output = command.render({
       commands: commandsArr,
       command: commandName,
-      commandDesc: commandDesc,
+      commandDescArr: commandsDescArr,
     });
     _addCommandToEntries(idx, {
       status: CommandStatus.Succeeded,

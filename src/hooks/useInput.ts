@@ -109,11 +109,11 @@ export function useInput(options: UseInputOptions) {
     options.inputRef.current?.scrollIntoView({ behavior: "smooth" });
   }
 
-  const { isSudo, commandName } = getCommandName(currentCommand.split(" "));
+  const { isSudo, commandName, commandDesc } = getCommandName(currentCommand.split(" "));
   const isValidCommand = commandMap.has(commandName);
 
   const state = { currentCommand, setCurrentCommand, askForPassword };
-  const command = { isSudo, commandName, isValidCommand };
+  const command = { isSudo, commandName, commandDesc, isValidCommand };
 
   return {
     state,
