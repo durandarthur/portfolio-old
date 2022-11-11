@@ -11,3 +11,9 @@ main section img {
     width: 20vw;
     height: auto;
 }
+
+.timeline-item-title {
+    font-family: "RobotoMono";
+    white-space: pre-wrap;
+    text-align: center!important;
+}

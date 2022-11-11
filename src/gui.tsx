@@ -1,96 +1,198 @@
-import React, { Component } from 'react'
-import { Chrono } from 'react-chrono';
+import { Component } from "react";
+import { Chrono } from "react-chrono";
 
 export class Gui extends Component {
   render() {
-    const items = [
-        {
-            title: "Décembre 2022\nAvril 2024",
-            cardTitle: "Concepteur Développeur d'Application (RNCP n°6)",
-            cardSubtitle:"O'clock, campus en ligne",
-            cardDetailedText: "Formation de développeur web en alternance (1 semaine en formation / 2 semaines en entreprise)\nCompétences apprises: PHP, Node, React, conteneurs, unit testing, design patterns, SoC, sécurité, applications bureau, DevOps",
-        },
-        {
-            title: "2021-2022",
-            cardTitle: "Projet personnel",
-            cardSubtitle:"Année de césure",
-            cardDetailedText: "Développement d'un site web avec React et Next.js, lié à une base de données postgresql avec fonctions CRUD.\nPermet de publier des idées de projet et d'en rechercher d'une façon similaire à un forum.",
-        },
-        {
-            title: "2021",
-            cardTitle: "Développeur fullstack",
-            cardSubtitle:"Creapli, Auzeville-Tolosane",
-            cardDetailedText: "J'ai développé une application web (soumise à une clause de confidentalité) en C# et JavaScript utilisée dans la gestion de finances pour une chaîne de bijouteries.",
-        },
-        {
-            title: "2019-2021",
-            cardTitle: "Bac+2 Spécialité informatique",
-            cardSubtitle:"CESI Ecole D'Ingénieurs, Labège",
-            cardDetailedText: "Formation C/C++, SQL, PHP, structures de données, algorithmes de tri/performance algorithmes",
-        },
-        {
-            title: "2017-2019",
-            cardTitle: "Baccalauréat STi2D",
-            cardSubtitle:"Cité Scolaire de Mirepoix",
-            cardDetailedText: "Spécialisation informatique (Systèmes d'Information et Numérique)",
-        },
+    const entries = [
+      {
+        title: "Décembre 2022\nAvril 2024",
+        cardTitle: "Concepteur Développeur d'Application (RNCP n°6)",
+        cardSubtitle: "O'clock, campus en ligne",
+        cardDetailedText:
+          "Formation de développeur web en alternance (1 semaine en formation / 2 semaines en entreprise)\nCompétences apprises: PHP, Node, React, conteneurs, unit testing, design patterns, SoC, sécurité, applications bureau, DevOps",
+      },
+      {
+        title: "2021-2022",
+        cardTitle: "Projet personnel",
+        cardSubtitle: "Année de césure",
+        cardDetailedText:
+          "Développement d'un site web avec React et Next.js, lié à une base de données postgresql avec fonctions CRUD.\nPermet de publier des idées de projet et d'en rechercher d'une façon similaire à un forum.",
+      },
+      {
+        title: "2021",
+        cardTitle: "Développeur fullstack",
+        cardSubtitle: "Creapli, Auzeville-Tolosane",
+        cardDetailedText:
+          "J'ai développé une application web (soumise à une clause de confidentalité) en C# et JavaScript utilisée dans la gestion de finances pour une chaîne de bijouteries.",
+      },
+      {
+        title: "2019-2021",
+        cardTitle: "Bac+2 Spécialité informatique",
+        cardSubtitle: "CESI Ecole D'Ingénieurs, Labège",
+        cardDetailedText:
+          "Formation C/C++, SQL, PHP, structures de données, algorithmes de tri/performance algorithmes",
+      },
+      {
+        title: "2017-2019",
+        cardTitle: "Baccalauréat STi2D",
+        cardSubtitle: "Cité Scolaire de Mirepoix",
+        cardDetailedText: "Spécialisation informatique (Systèmes d'Information et Numérique)",
+      },
     ];
+    const entriesTitles = [
+      {
+        title: `Décembre 2022\nAvril 2024`,
+      },
+      {
+        title: "2021-2022",
+      },
+      {
+        title: "2021",
+      },
+      {
+        title: "2019-2021",
+      },
+    ];
+    // let ex: Array<object> = []; 
+    // entries.map(entry => {
+    //     let temp = {} as {title: string};
+    //     temp.title = entry.title;
+    //     ex.push(temp);
+    // })
+    // that was dumb
     return (
-        <div className="bg-gray-500">
-            <header className="h-[10vh] flex w-full content-center justify-between text-gray-100">
-                <div className="flex shrink items-center [&>*]:ml-2 sm:[&>*]:ml-4">
-                    <a href="/">
-                        <svg className="w-12 h-12 sm:w-16 sm:h-16 flex-no-shrink fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 487.21192 513.16768"><defs><style>{".cls-1{fill:#fff;}.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:5px;}"}</style></defs>
-                            <path className="cls-1" d="M145.54489,5c90.36463,0,176.0687,29.78477,241.32462,83.86761C445.18481,137.1983,480,199.67769,480,256c0,56.29785-34.76462,118.76639-92.99539,167.1033C321.82928,477.20493,236.231,507,145.97774,507H5V5H145.54489m0-5H0V512H145.97774C345.20242,512,485,370.53485,485,256,485,141.38107,344.97858,0,145.54489,0Z" transform="translate(2.21195)"/><path className="cls-1" d="M182.58174,102.792c55.40126,0,107.93352,18.251,147.91979,51.39079C366.10757,183.69243,387.365,221.75494,387.365,256c0,34.23047-21.22659,72.28662-56.7811,101.8002C290.64758,390.95105,238.18111,409.208,182.84921,409.208H97.635V102.792h84.94673m0-5H92.635V414.208h90.2142C305.97006,414.208,392.365,326.78253,392.365,256c0-70.83447-86.5332-158.208-209.78322-158.208Z" transform="translate(2.21195)"/><line className="cls-2" x1="2.21125" y1="512.00133" x2="263.38449" y2="16.8517"/><line className="cls-2" x1="107.62062" y1="511.16145" x2="348.6472" y2="54.20722"/><line className="cls-2" x1="242.20892" y1="256" x2="394.57689" y2="256"/><line className="cls-2" x1="193.15756" y1="348.63498" x2="344.98973" y2="348.63498"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/arthur-durand-0967741b9/">
-                        <svg className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-current invert" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
-                            <path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm-215 1336h342v175h5c48-86 164-175 338-175 361 0 428 225 428 517v596h-357v-528c0-126-3-288-186-288-186 0-214 137-214 279v537h-357V1336zm-247-309c0 102-83 186-186 186-102 0-186-83-186-186 0-102 83-186 186-186 102 0 186 83 186 186zm-371 309h371v1113H834V1336z"/>
-                        </svg>
-                    </a>
-                    <a href="https://github.com/durandarthur">
-                        <svg className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-current invert" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 640 640">
-                            <path d="M319.988 7.973C143.293 7.973 0 151.242 0 327.96c0 141.392 91.678 261.298 218.826 303.63 16.004 2.964 21.886-6.957 21.886-15.414 0-7.63-.319-32.835-.449-59.552-89.032 19.359-107.8-37.772-107.8-37.772-14.552-36.993-35.529-46.831-35.529-46.831-29.032-19.879 2.209-19.442 2.209-19.442 32.126 2.245 49.04 32.954 49.04 32.954 28.56 48.922 74.883 34.76 93.131 26.598 2.882-20.681 11.15-34.807 20.315-42.803-71.08-8.067-145.797-35.516-145.797-158.14 0-34.926 12.52-63.485 32.965-85.88-3.33-8.078-14.291-40.606 3.083-84.674 0 0 26.87-8.61 88.029 32.8 25.512-7.075 52.878-10.642 80.056-10.76 27.2.118 54.614 3.673 80.162 10.76 61.076-41.386 87.922-32.8 87.922-32.8 17.398 44.08 6.485 76.631 3.154 84.675 20.516 22.394 32.93 50.953 32.93 85.879 0 122.907-74.883 149.93-146.117 157.856 11.481 9.921 21.733 29.398 21.733 59.233 0 42.792-.366 77.28-.366 87.804 0 8.516 5.764 18.473 21.992 15.354 127.076-42.354 218.637-162.274 218.637-303.582 0-176.695-143.269-319.988-320-319.988l-.023.107z"/>
-                        </svg>
-                    </a> 
+      <div className="bg-gray-500">
+        <header className="h-[10vh] flex w-full content-center justify-between text-gray-100">
+          <div className="flex shrink items-center [&>*]:ml-2 sm:[&>*]:ml-4">
+            <a href="/">
+              <svg
+                className="w-12 h-12 sm:w-16 sm:h-16 flex-no-shrink fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 487.21192 513.16768"
+              >
+                <defs>
+                  <style>
+                    {
+                      ".cls-1{fill:#fff;}.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:5px;}"
+                    }
+                  </style>
+                </defs>
+                <path
+                  className="cls-1"
+                  d="M145.54489,5c90.36463,0,176.0687,29.78477,241.32462,83.86761C445.18481,137.1983,480,199.67769,480,256c0,56.29785-34.76462,118.76639-92.99539,167.1033C321.82928,477.20493,236.231,507,145.97774,507H5V5H145.54489m0-5H0V512H145.97774C345.20242,512,485,370.53485,485,256,485,141.38107,344.97858,0,145.54489,0Z"
+                  transform="translate(2.21195)"
+                />
+                <path
+                  className="cls-1"
+                  d="M182.58174,102.792c55.40126,0,107.93352,18.251,147.91979,51.39079C366.10757,183.69243,387.365,221.75494,387.365,256c0,34.23047-21.22659,72.28662-56.7811,101.8002C290.64758,390.95105,238.18111,409.208,182.84921,409.208H97.635V102.792h84.94673m0-5H92.635V414.208h90.2142C305.97006,414.208,392.365,326.78253,392.365,256c0-70.83447-86.5332-158.208-209.78322-158.208Z"
+                  transform="translate(2.21195)"
+                />
+                <line className="cls-2" x1="2.21125" y1="512.00133" x2="263.38449" y2="16.8517" />
+                <line className="cls-2" x1="107.62062" y1="511.16145" x2="348.6472" y2="54.20722" />
+                <line className="cls-2" x1="242.20892" y1="256" x2="394.57689" y2="256" />
+                <line
+                  className="cls-2"
+                  x1="193.15756"
+                  y1="348.63498"
+                  x2="344.98973"
+                  y2="348.63498"
+                />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/arthur-durand-0967741b9/">
+              <svg
+                className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-current invert"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 3333 3333"
+                shapeRendering="geometricPrecision"
+                textRendering="geometricPrecision"
+                imageRendering="optimizeQuality"
+                fillRule="evenodd"
+                clipRule="evenodd"
+              >
+                <path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm-215 1336h342v175h5c48-86 164-175 338-175 361 0 428 225 428 517v596h-357v-528c0-126-3-288-186-288-186 0-214 137-214 279v537h-357V1336zm-247-309c0 102-83 186-186 186-102 0-186-83-186-186 0-102 83-186 186-186 102 0 186 83 186 186zm-371 309h371v1113H834V1336z" />
+              </svg>
+            </a>
+            <a href="https://github.com/durandarthur">
+              <svg
+                className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-current invert"
+                xmlns="http://www.w3.org/2000/svg"
+                shapeRendering="geometricPrecision"
+                textRendering="geometricPrecision"
+                imageRendering="optimizeQuality"
+                fillRule="evenodd"
+                clipRule="evenodd"
+                viewBox="0 0 640 640"
+              >
+                <path d="M319.988 7.973C143.293 7.973 0 151.242 0 327.96c0 141.392 91.678 261.298 218.826 303.63 16.004 2.964 21.886-6.957 21.886-15.414 0-7.63-.319-32.835-.449-59.552-89.032 19.359-107.8-37.772-107.8-37.772-14.552-36.993-35.529-46.831-35.529-46.831-29.032-19.879 2.209-19.442 2.209-19.442 32.126 2.245 49.04 32.954 49.04 32.954 28.56 48.922 74.883 34.76 93.131 26.598 2.882-20.681 11.15-34.807 20.315-42.803-71.08-8.067-145.797-35.516-145.797-158.14 0-34.926 12.52-63.485 32.965-85.88-3.33-8.078-14.291-40.606 3.083-84.674 0 0 26.87-8.61 88.029 32.8 25.512-7.075 52.878-10.642 80.056-10.76 27.2.118 54.614 3.673 80.162 10.76 61.076-41.386 87.922-32.8 87.922-32.8 17.398 44.08 6.485 76.631 3.154 84.675 20.516 22.394 32.93 50.953 32.93 85.879 0 122.907-74.883 149.93-146.117 157.856 11.481 9.921 21.733 29.398 21.733 59.233 0 42.792-.366 77.28-.366 87.804 0 8.516 5.764 18.473 21.992 15.354 127.076-42.354 218.637-162.274 218.637-303.582 0-176.695-143.269-319.988-320-319.988l-.023.107z" />
+              </svg>
+            </a>
+          </div>
+          <nav className="flex flex-auto items-center justify-center space-x-2">
+            <a href="">Expérience</a>
+            <a href="">Projets</a>
+            <a href="">Contact</a>
+          </nav>
+          <button className="p-1 border-2 rounded-xl h-min self-center box-content mr-2 sm:mr-4">
+            CV
+          </button>
+        </header>
+        <hr />
+        <main className="flex flex-col items-center mt-[5vh] sm:mt-[20vh]">
+          <section className="flex justify-center w-full md:w-3/4 2xl:w-7/12 h-[25vh]">
+            <img
+              src="/images/photo.jpg"
+              alt="Photo de profil"
+              className="hidden sm:block w-auto h-full mr-4"
+            />
+            <div className="grid grid-rows-6 gap-1 place-content-between w-auto text-center sm:text-left sm:text-sm md:text-md lg:text-xl xl:text-xl 2xl:text-xl 3xl:text-2xl">
+              <p className="text-gray-200 self-start font-mono text-[1em]">
+                Bienvenue chez
+              </p>
+              <h1 className="text-gray-100 row-span-2 font-bold self-center text-[3em] sm:text-[4em]">
+                Arthur DURAND
+              </h1>
+              <h2 className="text-gray-400 text-[1.5em] sm:text-[2em]">
+                Apprenti développeur fullstack
+              </h2>
+              <h3 className="text-gray-300 row-span-2 self-end text-[1em] break-words leading-none">
+                En tant que passionné des nouvelles technologies, je m'engage à utiliser ma passion
+                pour faire avancer les missions des entreprises.
+              </h3>
+            </div>
+          </section>
+          <div className="w-1/2 h-full">
+            <Chrono
+              items={entriesTitles}
+              theme={{
+                primary: "#D7D7D7",
+                secondary: "transparent",
+                cardBgColor: "#333333",
+                cardForeColor: "#D7D7D7",
+                titleColor: "white",
+                titleColorActive: "white",
+              }}
+              fontSizes={{
+                title: '1.875rem',
+              }}
+              hideControls={true}
+              flipLayout={true}
+              useReadMore={false}
+            >
+              {entries.map((entry, i) => (
+                <div key={i}>
+                  {/* <time>{entry.title}</time> */}
+                  <h1 className="text-gray-200 text-4xl">{entry.cardTitle}</h1>
+                  <h2 className="text-gray-200 text-3xl">{entry.cardSubtitle}</h2>
+                  <p className="text-gray-300 text-2xl">{entry.cardDetailedText}</p>
                 </div>
-                <nav className="flex flex-auto items-center justify-center space-x-2">
-                    <a href="">Expérience</a>
-                    <a href="">Projets</a>
-                    <a href="">Contact</a>
-                </nav>
-                <button className="p-1 border-2 rounded-xl h-min self-center box-content mr-2 sm:mr-4">CV</button>
-            </header>
-            <hr />
-            <main className="flex flex-col items-center mt-[5vh] sm:mt-[20vh]">
-                <section className="flex justify-center w-full md:w-3/4 2xl:w-7/12 h-[25vh]">
-                    <img src="/images/photo.jpg" alt="Photo de profil" className="hidden sm:block w-auto h-full mr-4" />
-                    <div className="grid grid-rows-6 gap-1 place-content-between w-auto text-center sm:text-left sm:text-sm md:text-md lg:text-xl xl:text-xl 2xl:text-xl 3xl:text-2xl">
-                        <p className="text-gray-200 self-end font-mono text-[1em]">Salut ! <span>Moi c'est</span></p>
-                        <h1 className="text-gray-100 row-span-2 font-bold self-center text-[3em] sm:text-[4em]">Arthur DURAND</h1>
-                        <h2 className="text-gray-400 text-[1.5em] sm:text-[2em]">Apprenti développeur fullstack</h2>
-                        <h3 className="text-gray-300 row-span-2 self-end text-[1em] break-words leading-none">En tant que passionné des nouvelles technologies, je m'engage à utiliser ma passion pour faire avancer les missions des entreprises.</h3>
-                    </div>
-                </section>
-                <div style={{ width: "500px", height: "950px" }}>
-                    <Chrono
-                    items={items}
-                    mode="VERTICAL_ALTERNATING"
-                    theme={{
-                        primary: '#D7D7D7',
-                        secondary: 'transparent',
-                        cardBgColor: '#333333',
-                        cardForeColor: '#D7D7D7',
-                        titleColor: 'white',
-                        titleColorActive: 'white',
-                    }}
-                    />
-                </div>
-            </main>
-        </div>
+              ))}
+            </Chrono>
+          </div>
+        </main>
+      </div>
     );
   }
 }
 
-export default Gui
+export default Gui;
