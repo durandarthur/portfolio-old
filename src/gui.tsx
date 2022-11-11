@@ -52,6 +52,9 @@ export class Gui extends Component {
       {
         title: "2019-2021",
       },
+      {
+        title: "2017-2019",
+      },
     ];
     // let ex: Array<object> = []; 
     // entries.map(entry => {
@@ -128,14 +131,12 @@ export class Gui extends Component {
               </svg>
             </a>
           </div>
-          <nav className="flex flex-auto items-center justify-center space-x-2">
-            <a href="">Expérience</a>
-            <a href="">Projets</a>
-            <a href="">Contact</a>
+          <nav className="flex flex-auto items-center justify-center 2xl:text-3xl 2xl:justify-end 2xl:[&>*]:mr-4">
+            <a href="" className="hover:underline">Expérience</a>
+            <a href="" className="hover:underline">Projets</a>
+            <a href="" className="hover:underline">Contact</a>
           </nav>
-          <button className="p-1 border-2 rounded-xl h-min self-center box-content mr-2 sm:mr-4">
-            CV
-          </button>
+          <input type="button" value="CV" className="p-1 2xl:p-4 border-2 rounded-2xl h-min self-center box-content hover:cursor-pointer hover:bg-gray-200 hover:text-gray-400 mr-2 sm:mr-4 2xl:text-3xl"/>
         </header>
         <hr />
         <main className="flex flex-col items-center mt-[5vh] sm:mt-[20vh]">
@@ -161,6 +162,10 @@ export class Gui extends Component {
               </h3>
             </div>
           </section>
+          <p className="text-5xl text-gray-200 mt-[20vh] mb-[7vh]">Mon parcours professionel</p>
+          <div className="w-full h-[20vh]">
+            <div className="down-arrow m-auto"></div>
+          </div>
           <div className="w-1/2 h-full">
             <Chrono
               items={entriesTitles}
