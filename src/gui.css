@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: "RobotoMono";
-    src: url("../public/fonts/RobotoMono-Bold.ttf") format("truetype");
+    src: url("/fonts/RobotoMono-Bold.ttf") format("truetype");
 }
 
 main section img {
