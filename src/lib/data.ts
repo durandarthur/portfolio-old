@@ -54,16 +54,75 @@ export const entriesTitles = [
 ];
 
 export const projects = [
-    {
-        title: "Portfolio website",
-        link: "/",
-    },
-    {
-        title: "Projectideas website",
-        link: "/",
-    },
-    {
-        title: "?",
-        link: "/",
-    },
-]
+  {
+    title: "Portfolio website",
+    link: "/",
+  },
+  {
+    title: "Projectideas website",
+    link: "/",
+  },
+  {
+    title: "?",
+    link: "/",
+  },
+];
+
+export const usedTechs = [
+  {
+    name: "JavaScript",
+    image: "",
+  },
+  {
+    name: "TypeScript",
+    image: "",
+  },
+  {
+    name: "Node.js",
+    image: "",
+  },
+  {
+    name: "React",
+    image: "",
+  },
+  {
+    name: "TailwindCSS",
+    image: "",
+  },
+  {
+    name: "HTML",
+    image: "",
+  },
+  {
+    name: "CSS",
+    image: "",
+  },
+  {
+    name: "Next.js",
+    image: "",
+  },
+  {
+    name: "SASS",
+    image: "",
+  },
+  {
+    name: "postCSS",
+    image: "",
+  },
+  {
+    name: "Vite",
+    image: "",
+  },
+  {
+    name: "Git",
+    image: "",
+  },
+  {
+    name: "Vercel",
+    image: "",
+  },
+  {
+    name: "VSCode",
+    image: "",
+  },
+];

@@ -1,11 +1,10 @@
 import { Component } from "react";
 import { Chrono } from "react-chrono";
-import { entries, entriesTitles, projects } from "./lib/data";
+import { entries, entriesTitles, projects, usedTechs } from "./lib/data";
 
 export class Gui extends Component {
   render() {
-    
-    // let ex: Array<object> = []; 
+    // let ex: Array<object> = [];
     // entries.map(entry => {
     //     let temp = {} as {title: string};
     //     temp.title = entry.title;
@@ -81,11 +80,21 @@ export class Gui extends Component {
             </a>
           </div>
           <nav className="flex flex-auto items-center justify-center 2xl:text-3xl 2xl:justify-end 2xl:[&>*]:mr-4">
-            <a href="" className="hover:underline">Expérience</a>
-            <a href="" className="hover:underline">Projets</a>
-            <a href="" className="hover:underline">Contact</a>
+            <a href="" className="hover:underline">
+              Expérience
+            </a>
+            <a href="" className="hover:underline">
+              Projets
+            </a>
+            <a href="" className="hover:underline">
+              Contact
+            </a>
           </nav>
-          <input type="button" value="CV" className="p-1 2xl:p-4 border-2 rounded-2xl h-min self-center box-content hover:cursor-pointer hover:bg-gray-200 hover:text-gray-400 mr-2 sm:mr-4 2xl:text-3xl"/>
+          <input
+            type="button"
+            value="CV"
+            className="p-1 2xl:p-4 border-2 rounded-2xl h-min self-center box-content hover:cursor-pointer hover:bg-gray-200 hover:text-gray-400 mr-2 sm:mr-4 2xl:text-3xl"
+          />
         </header>
         <hr />
         <main className="flex flex-col items-center mt-[5vh] sm:mt-[20vh]">
@@ -96,9 +105,7 @@ export class Gui extends Component {
               className="hidden sm:block w-auto h-full mr-4"
             />
             <div className="grid grid-rows-6 gap-1 place-content-between w-auto text-center sm:text-left sm:text-sm md:text-md lg:text-xl xl:text-xl 2xl:text-xl 3xl:text-2xl">
-              <p className="text-gray-200 self-start font-mono text-[1em]">
-                Bienvenue chez
-              </p>
+              <p className="text-gray-200 self-start font-mono text-[1em]">Bienvenue chez</p>
               <h1 className="text-gray-100 row-span-2 font-bold self-center text-[3em] sm:text-[4em]">
                 Arthur DURAND
               </h1>
@@ -127,7 +134,7 @@ export class Gui extends Component {
                 titleColorActive: "white",
               }}
               fontSizes={{
-                title: '1.875rem',
+                title: "1.875rem",
               }}
               hideControls={true}
               flipLayout={true}
@@ -143,14 +150,30 @@ export class Gui extends Component {
               ))}
             </Chrono>
           </div>
-          <div className="flex h-[20vh] w-full space-x-4 mx-4">
+          <section className="grid grid-cols-3 h-auto w-full gap-8 px-8 mb-8">
             {projects.map((project, i) => (
-            <div key={i} className="flex-1 bg-gray-400 rounded-xl">
-              <a href={project.link} className="text-2xl text-gray-200">{project.title}</a>
+              <div
+                key={i}
+                className="flex flex-1 h-[20vh] justify-center align-middle bg-gray-400 rounded-xl"
+              >
+                <a href={project.link} className="text-2xl text-gray-200 my-auto">
+                  {project.title}
+                </a>
+              </div>
+            ))}
+          </section>
+          <section className="w-full px-8 mb-8">
+            <div className="grid grid-cols-9 h-auto w-full p-14 gap-14 bg-gray-400 rounded-xl">
+              {usedTechs.map((tech, i) => (
+                <div
+                  className="w-auto aspect-square bg-cover bg-gray-300 rounded-xl"
+                  style={{ backgroundImage: tech.image }}
+                >
+                  <p>{tech.name}</p>
+                </div>
+              ))}
             </div>
-          ))}
-          </div>
-          
+          </section>
         </main>
       </div>
     );
