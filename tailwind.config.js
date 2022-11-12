@@ -3,6 +3,8 @@ module.exports = {
   theme: {
     colors: {
       transparent: 'transparent',
+      white: "#FFFFFF",
+      black: "#000000",
       'gray': {
         100: '#F2F2F2',
         200: '#D7D7D7',
@@ -33,5 +35,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 };

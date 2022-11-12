@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Chrono } from "react-chrono";
+import ContactForm from "./components/ContactForm";
 import { entries, entriesTitles, projects, usedTechs } from "./lib/data";
 
 export class Gui extends Component {
@@ -12,8 +13,8 @@ export class Gui extends Component {
     // })
     // that was dumb
     return (
-      <div className="bg-gray-500">
-        <header className="h-[10vh] flex w-full content-center justify-between text-gray-100">
+      <div className="bg-gray-500 text-gray-200">
+        <header className="sticky top-0 z-50 h-[10vh] flex w-full content-center justify-between text-gray-100">
           <div className="flex shrink items-center [&>*]:ml-2 sm:[&>*]:ml-4">
             <a href="/">
               <svg
@@ -52,7 +53,7 @@ export class Gui extends Component {
             </a>
             <a href="https://www.linkedin.com/in/arthur-durand-0967741b9/">
               <svg
-                className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-current invert"
+                className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-gray-200 hover:fill-[#0E76A8] rounded-full"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 3333 3333"
                 shapeRendering="geometricPrecision"
@@ -66,7 +67,7 @@ export class Gui extends Component {
             </a>
             <a href="https://github.com/durandarthur">
               <svg
-                className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-current invert"
+                className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-current invert hover:invert-0 hover:bg-white hover:border-2 rounded-full"
                 xmlns="http://www.w3.org/2000/svg"
                 shapeRendering="geometricPrecision"
                 textRendering="geometricPrecision"
@@ -80,13 +81,13 @@ export class Gui extends Component {
             </a>
           </div>
           <nav className="flex flex-auto items-center justify-center 2xl:text-3xl 2xl:justify-end 2xl:[&>*]:mr-4">
-            <a href="" className="hover:underline">
+            <a href="#timeline" className="hover:underline">
               Expérience
             </a>
-            <a href="" className="hover:underline">
+            <a href="#projects" className="hover:underline">
               Projets
             </a>
-            <a href="" className="hover:underline">
+            <a href="#contactForm" className="hover:underline">
               Contact
             </a>
           </nav>
@@ -96,7 +97,7 @@ export class Gui extends Component {
             className="p-1 2xl:p-4 border-2 rounded-2xl h-min self-center box-content hover:cursor-pointer hover:bg-gray-200 hover:text-gray-400 mr-2 sm:mr-4 2xl:text-3xl"
           />
         </header>
-        <hr />
+        {/* <hr /> */}
         <main className="flex flex-col items-center mt-[5vh] sm:mt-[20vh]">
           <section className="flex justify-center w-full md:w-3/4 2xl:w-7/12 h-[25vh]">
             <img
@@ -105,7 +106,7 @@ export class Gui extends Component {
               className="hidden sm:block w-auto h-full mr-4"
             />
             <div className="grid grid-rows-6 gap-1 place-content-between w-auto text-center sm:text-left sm:text-sm md:text-md lg:text-xl xl:text-xl 2xl:text-xl 3xl:text-2xl">
-              <p className="text-gray-200 self-start font-mono text-[1em]">Bienvenue chez</p>
+              <p className="self-start font-mono font-bold text-[1em]">Bienvenue chez</p>
               <h1 className="text-gray-100 row-span-2 font-bold self-center text-[3em] sm:text-[4em]">
                 Arthur DURAND
               </h1>
@@ -118,11 +119,11 @@ export class Gui extends Component {
               </h3>
             </div>
           </section>
-          <p className="text-5xl text-gray-200 mt-[20vh] mb-[7vh]">Mon parcours professionel</p>
+          <p className="text-5xl mt-[20vh] mb-[7vh]">Mon parcours professionel</p>
           <div className="w-full h-[20vh]">
             <div className="down-arrow m-auto"></div>
           </div>
-          <div className="w-1/2 h-full">
+          <div id="timeline" className="w-1/2 h-full">
             <Chrono
               items={entriesTitles}
               theme={{
@@ -143,20 +144,20 @@ export class Gui extends Component {
               {entries.map((entry, i) => (
                 <div key={i}>
                   {/* <time>{entry.title}</time> */}
-                  <h1 className="text-gray-200 text-4xl">{entry.cardTitle}</h1>
-                  <h2 className="text-gray-200 text-3xl">{entry.cardSubtitle}</h2>
+                  <h1 className="text-4xl">{entry.cardTitle}</h1>
+                  <h2 className="text-3xl">{entry.cardSubtitle}</h2>
                   <p className="text-gray-300 text-2xl">{entry.cardDetailedText}</p>
                 </div>
               ))}
             </Chrono>
           </div>
-          <section className="grid grid-cols-3 h-auto w-full gap-8 px-8 mb-8">
+          <section id="projects" className="grid grid-cols-3 h-auto w-full gap-8 px-8 mb-8">
             {projects.map((project, i) => (
               <div
                 key={i}
                 className="flex flex-1 h-[20vh] justify-center align-middle bg-gray-400 rounded-xl"
               >
-                <a href={project.link} className="text-2xl text-gray-200 my-auto">
+                <a href={project.link} className="text-2xl my-auto">
                   {project.title}
                 </a>
               </div>
@@ -166,14 +167,16 @@ export class Gui extends Component {
             <div className="grid grid-cols-9 h-auto w-full p-14 gap-14 bg-gray-400 rounded-xl">
               {usedTechs.map((tech, i) => (
                 <div
-                  className="w-auto aspect-square bg-cover bg-gray-300 rounded-xl"
+                  key={i}
+                  className="flex justify-center align-middle w-auto aspect-square bg-cover bg-gray-300 rounded-xl text-2xl"
                   style={{ backgroundImage: tech.image }}
                 >
-                  <p>{tech.name}</p>
+                  <p className="my-auto">{tech.name}</p>
                 </div>
               ))}
             </div>
           </section>
+          <ContactForm />
         </main>
       </div>
     );
