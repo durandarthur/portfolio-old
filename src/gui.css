@@ -25,6 +25,21 @@ main section img {
   text-align: center !important;
 }
 
+::-moz-selection {
+  color: inherit;
+  background-color: #333333;
+}
+
+::selection {
+  color: inherit;
+  background-color: #333333;
+}
+
+h2::selection {
+  color: inherit;
+  background-color: #D7D7D7;
+}
+
 .down-arrow {
     width: 128px;
     height: 128px;
