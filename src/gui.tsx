@@ -5,13 +5,6 @@ import { entries, entriesTitles, projects, usedTechs } from "./lib/data";
 
 export class Gui extends Component {
   render() {
-    // let ex: Array<object> = [];
-    // entries.map(entry => {
-    //     let temp = {} as {title: string};
-    //     temp.title = entry.title;
-    //     ex.push(temp);
-    // })
-    // that was dumb
     return (
       <div className="bg-gray-500 text-gray-200">
         <header className="sticky top-0 z-50 h-[10vh] flex w-full content-center justify-between text-gray-100">
@@ -80,7 +73,7 @@ export class Gui extends Component {
               </svg>
             </a>
           </div>
-          <nav className="flex flex-auto items-center justify-center 2xl:text-3xl 2xl:justify-end 2xl:[&>*]:mr-4">
+          <nav className="flex flex-auto items-center justify-center text-lg sm:text-xl md:text-2xl xl:text-3xl lg:justify-end [&>*]:mr-1 sm:[&>*]:mr-2 md:[&>*]:mr-3 lg:[&>*]:mr-4">
             <a href="#timeline" className="hover:underline">
               Expérience
             </a>
@@ -94,7 +87,7 @@ export class Gui extends Component {
           <input
             type="button"
             value="CV"
-            className="p-1 2xl:p-4 border-2 rounded-2xl h-min self-center box-content hover:cursor-pointer hover:bg-gray-200 hover:text-gray-400 mr-2 sm:mr-4 2xl:text-3xl"
+            className="p-2 md:p-3 2xl:p-4 border-2 rounded-2xl h-min self-center box-content hover:cursor-pointer hover:bg-gray-200 hover:text-gray-400 mr-2 sm:mr-4 text-lg sm:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl"
           />
         </header>
         {/* <hr /> */}
@@ -105,9 +98,9 @@ export class Gui extends Component {
               alt="Photo de profil"
               className="hidden sm:block w-auto h-full mr-4"
             />
-            <div className="grid grid-rows-6 gap-1 place-content-between w-auto text-center sm:text-left sm:text-sm md:text-md lg:text-xl xl:text-xl 2xl:text-xl 3xl:text-2xl">
+            <div className="grid grid-rows-6 gap-1 place-content-between w-min text-center sm:text-left sm:text-sm md:text-md lg:text-xl xl:text-xl 2xl:text-xl 3xl:text-2xl">
               <p className="self-start font-mono font-bold text-[1em]">Bienvenue chez</p>
-              <h1 className="text-gray-100 row-span-2 font-bold self-center text-[3em] sm:text-[4em]">
+              <h1 className="text-gray-100 row-span-2 font-bold self-center whitespace-nowrap text-[3em] sm:text-[4em]">
                 Arthur DURAND
               </h1>
               <h2 className="text-gray-400 text-[1.5em] sm:text-[2em]">

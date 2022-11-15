@@ -4,6 +4,10 @@ import { useCommands } from "./hooks/useCommands";
 import { loadCommands } from "./lib/Command";
 
 export default function App() {
+  if (window.innerWidth < 1324) {
+    window.location.replace("http://localhost:5173/gui.html");
+  }
+
   const containerRef = React.useRef<HTMLDivElement>(null);
   const commands = useCommands();
 

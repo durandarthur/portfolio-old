@@ -55,7 +55,7 @@ export function Input({ entry, handleNewCommand }: Props) {
           disabled={input.state.askForPassword || !!entry?.command}
           ref={inputRef}
           className={classNames(
-            "bg-transparent outline-none",
+            "p-0 bg-transparent outline-none focus:border-transparent focus:ring-0",
             input.state.currentCommand
               ? input.command.isValidCommand
                 ? "text-green-500"
