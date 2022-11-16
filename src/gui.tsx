@@ -116,7 +116,7 @@ export class Gui extends Component {
           <div className="w-full h-[20vh] hidden 2lg:block">
             <div className="down-arrow m-auto"></div>
           </div>
-          <div id="timeline" className="w-1/2 h-full">
+          <div id="timeline" className="w-full lg:w-3/4 5xl:w-1/2 h-full overflow-visible">
             <Chrono
               mode={window.innerWidth < 1350 ? "VERTICAL" : "VERTICAL_ALTERNATING"}
               items={entriesTitles}

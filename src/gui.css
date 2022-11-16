@@ -40,6 +40,10 @@ h2::selection {
   background-color: #D7D7D7;
 }
 
+.timeline-verticalstyles__TimelineTitleWrapper-sc-1427v1d-5 {
+  width: 50%!important;
+}
+
 .down-arrow {
     width: 128px;
     height: 128px;
