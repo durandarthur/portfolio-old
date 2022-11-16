@@ -113,11 +113,12 @@ export class Gui extends Component {
             </div>
           </section>
           <p className="text-5xl mt-[20vh] mb-[7vh]">Mon parcours professionel</p>
-          <div className="w-full h-[20vh]">
+          <div className="w-full h-[20vh] hidden 2lg:block">
             <div className="down-arrow m-auto"></div>
           </div>
           <div id="timeline" className="w-1/2 h-full">
             <Chrono
+              mode={window.innerWidth < 1350 ? "VERTICAL" : "VERTICAL_ALTERNATING"}
               items={entriesTitles}
               theme={{
                 primary: "#D7D7D7",
