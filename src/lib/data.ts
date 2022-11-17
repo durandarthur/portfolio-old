@@ -70,59 +70,73 @@ export const projects = [
 
 export const usedTechs = [
   {
-    name: "JavaScript",
-    image: "url(/images/logos/js.png)",
-  },
-  {
-    name: "TypeScript",
-    image: "url(/images/logos/ts.png)",
-  },
-  {
-    name: "Node.js",
-    image: "url(/images/logos/nodejs.png)",
-  },
-  {
-    name: "React",
-    image: "url(/images/logos/react.png)",
-  },
-  {
-    name: "TailwindCSS",
-    image: "url(/images/logos/tailwind.png)",
-  },
-  {
     name: "HTML",
     image: "url(/images/logos/html.png)",
+    link: "https://fr.wikipedia.org/wiki/Hypertext_Markup_Language",
   },
   {
     name: "CSS",
     image: "url(/images/logos/css.png)",
+    link: "https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade",
+  },
+  {
+    name: "JavaScript",
+    image: "url(/images/logos/js.png)",
+    link: "https://fr.wikipedia.org/wiki/JavaScript",
+  },
+  {
+    name: "TypeScript",
+    image: "url(/images/logos/ts.png)",
+    link: "https://fr.wikipedia.org/wiki/TypeScript",
+  },
+  {
+    name: "Node.js",
+    image: "url(/images/logos/nodejs.png)",
+    link: "https://nodejs.org/fr/",
+  },
+  {
+    name: "React",
+    image: "url(/images/logos/react.png)",
+    link: "https://fr.reactjs.org/",
+  },
+  {
+    name: "TailwindCSS",
+    image: "url(/images/logos/tailwind.png)",
+    link: "https://tailwindcss.com/",
   },
   {
     name: "Next.js",
     image: "url(/images/logos/nextjs.png)",
+    link: "https://nextjs.org/",
   },
   {
     name: "SASS",
     image: "url(/images/logos/sass.png)",
+    link: "https://fr.wikipedia.org/wiki/Sass_(langage)",
   },
   {
     name: "postCSS",
     image: "url(/images/logos/postcss.png)",
+    link: "https://postcss.org/",
   },
   {
     name: "Vite",
     image: "url(/images/logos/vite.png)",
+    link: "https://vitejs.dev/",
   },
   {
     name: "Git",
     image: "url(/images/logos/git.png)",
+    link: "https://fr.wikipedia.org/wiki/Git",
   },
   {
     name: "Vercel",
     image: "url(/images/logos/vercel.png)",
+    link: "https://vercel.com/",
   },
   {
     name: "VSCode",
     image: "url(/images/logos/vscode.png)",
+    link: "https://code.visualstudio.com/",
   },
 ];
