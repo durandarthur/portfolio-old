@@ -71,58 +71,58 @@ export const projects = [
 export const usedTechs = [
   {
     name: "JavaScript",
-    image: "",
+    image: "url(/images/logos/js.png)",
   },
   {
     name: "TypeScript",
-    image: "",
+    image: "url(/images/logos/ts.png)",
   },
   {
     name: "Node.js",
-    image: "",
+    image: "url(/images/logos/nodejs.png)",
   },
   {
     name: "React",
-    image: "",
+    image: "url(/images/logos/react.png)",
   },
   {
     name: "TailwindCSS",
-    image: "",
+    image: "url(/images/logos/tailwind.png)",
   },
   {
     name: "HTML",
-    image: "",
+    image: "url(/images/logos/html.png)",
   },
   {
     name: "CSS",
-    image: "",
+    image: "url(/images/logos/css.png)",
   },
   {
     name: "Next.js",
-    image: "",
+    image: "url(/images/logos/nextjs.png)",
   },
   {
     name: "SASS",
-    image: "",
+    image: "url(/images/logos/sass.png)",
   },
   {
     name: "postCSS",
-    image: "",
+    image: "url(/images/logos/postcss.png)",
   },
   {
     name: "Vite",
-    image: "",
+    image: "url(/images/logos/vite.png)",
   },
   {
     name: "Git",
-    image: "",
+    image: "url(/images/logos/git.png)",
   },
   {
     name: "Vercel",
-    image: "",
+    image: "url(/images/logos/vercel.png)",
   },
   {
     name: "VSCode",
-    image: "",
+    image: "url(/images/logos/vscode.png)",
   },
 ];

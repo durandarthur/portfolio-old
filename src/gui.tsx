@@ -158,14 +158,14 @@ export class Gui extends Component {
             ))}
           </section>
           <section className="w-full px-8 mb-8">
-            <div className="grid grid-cols-9 h-auto w-full p-14 gap-14 bg-gray-400 rounded-xl">
+            <div className="grid grid-cols-3 xl:grid-cols-6 2xl:grid-cols-9 h-auto w-full p-14 gap-14 bg-gray-400 rounded-xl">
               {usedTechs.map((tech, i) => (
                 <div
                   key={i}
-                  className="flex justify-center align-middle w-auto aspect-square bg-cover bg-gray-300 rounded-xl text-2xl"
-                  style={{ backgroundImage: tech.image }}
+                  className={`flex justify-center align-middle w-auto aspect-square bg-contain bg-no-repeat bg-center rounded-xl text-2xl hover:cursor-pointer [&>*]:hover:visible`}
+                  style={{backgroundImage: tech.image}}
                 >
-                  <p className="my-auto">{tech.name}</p>
+                  <p className="my-auto bg-gray-300 rounded-xl p-2 invisible select-none">{tech.name}</p>
                 </div>
               ))}
             </div>
