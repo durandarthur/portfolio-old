@@ -11,36 +11,13 @@ export class Gui extends Component {
           <div className="flex shrink items-center [&>*]:ml-2 sm:[&>*]:ml-4">
             <a href="/">
               <svg
-                className="w-12 h-12 sm:w-16 sm:h-16 flex-no-shrink fill-current"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 487.21192 513.16768"
+                viewBox="0 0 484.99994 512"
+                className="w-10 h-10 sm:w-16 sm:h-16 2xl:w-20 2xl:h-20 flex-no-shrink fill-gray-100 lg:fill-transparent lg:stroke-gray-100 lg:stroke-[5px] lg:hover:fill-gray-100 lg:transition"
               >
-                <defs>
-                  <style>
-                    {
-                      ".cls-1{fill:#fff;}.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:5px;}"
-                    }
-                  </style>
-                </defs>
                 <path
                   className="cls-1"
-                  d="M145.54489,5c90.36463,0,176.0687,29.78477,241.32462,83.86761C445.18481,137.1983,480,199.67769,480,256c0,56.29785-34.76462,118.76639-92.99539,167.1033C321.82928,477.20493,236.231,507,145.97774,507H5V5H145.54489m0-5H0V512H145.97774C345.20242,512,485,370.53485,485,256,485,141.38107,344.97858,0,145.54489,0Z"
-                  transform="translate(2.21195)"
-                />
-                <path
-                  className="cls-1"
-                  d="M182.58174,102.792c55.40126,0,107.93352,18.251,147.91979,51.39079C366.10757,183.69243,387.365,221.75494,387.365,256c0,34.23047-21.22659,72.28662-56.7811,101.8002C290.64758,390.95105,238.18111,409.208,182.84921,409.208H97.635V102.792h84.94673m0-5H92.635V414.208h90.2142C305.97006,414.208,392.365,326.78253,392.365,256c0-70.83447-86.5332-158.208-209.78322-158.208Z"
-                  transform="translate(2.21195)"
-                />
-                <line className="cls-2" x1="2.21125" y1="512.00133" x2="263.38449" y2="16.8517" />
-                <line className="cls-2" x1="107.62062" y1="511.16145" x2="348.6472" y2="54.20722" />
-                <line className="cls-2" x1="242.20892" y1="256" x2="394.57689" y2="256" />
-                <line
-                  className="cls-2"
-                  x1="193.15756"
-                  y1="348.63498"
-                  x2="344.98973"
-                  y2="348.63498"
+                  d="M145.54492,0H0V512H145.97778c199.22461-.00006,339.02216-141.46521,339.02216-256C484.99994,141.3811,344.97858,0,145.54492,0Zm246.82,256H239.19836l66.19245-125.492C359.478,162.402,392.36493,212.33856,392.36493,256ZM182.58173,97.792a253.95079,253.95079,0,0,1,35.25305,2.44934L92.635,337.60345V97.792Zm.26751,316.416H155.74945l34.5874-65.57306H348.01038C310.87787,385.98645,252.79572,414.208,182.84924,414.208Z"
                 />
               </svg>
             </a>
@@ -154,9 +131,7 @@ export class Gui extends Component {
           >
             {projects.map((project, i) => (
               <a key={i} href={project.link} target="_blank">
-                <div
-                  className="flex flex-1 h-[20vh] justify-center align-middle bg-gray-400 rounded-xl [&>*]:hover:text-3xl"
-                >
+                <div className="flex flex-1 h-[20vh] justify-center align-middle bg-gray-400 rounded-xl [&>*]:hover:text-3xl">
                   <p className="text-2xl text-center my-auto transition-all">{project.title}</p>
                 </div>
               </a>
