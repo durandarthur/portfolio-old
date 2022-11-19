@@ -4,8 +4,13 @@ import { useCommands } from "./hooks/useCommands";
 import { loadCommands } from "./lib/Command";
 
 export default function App() {
+
   if (window.innerWidth < 1324) {
     window.location.replace("http://localhost:5173/gui.html");
+  }
+  
+  document.onmousedown = (e) => {
+    e.preventDefault();
   }
 
   const containerRef = React.useRef<HTMLDivElement>(null);

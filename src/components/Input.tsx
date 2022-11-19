@@ -52,6 +52,7 @@ export function Input({ entry, handleNewCommand }: Props) {
           spellCheck="false"
           type="text"
           autoFocus
+          // onBlur={({ target }) => target.focus()}
           disabled={input.state.askForPassword || !!entry?.command}
           ref={inputRef}
           className={classNames(

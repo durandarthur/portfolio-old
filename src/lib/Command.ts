@@ -27,7 +27,7 @@ export async function loadCommands() {
     import("./commands/HelpCommand"),
     import("./commands/BioCommand"),
     import("./commands/SocialsCommand"),
-    import("./commands/GuiCommand")
+    import("./commands/GuiCommand"),
   ]);
 
   for (const file of commands) {
