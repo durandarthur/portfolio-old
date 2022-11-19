@@ -59,19 +59,6 @@ h2::selection {
   }
 }
 
-/* @keyframes jumpInfinite { // ended up being slow
-  0% {
-    margin-top: 0;
-  }
-  50% {
-    margin-top: 20px;
-  }
-  100% {
-    margin-top: 0;
-  }
-} */
-
-
 /* npm component style overriding */
 
 .timeline-verticalstyles__TimelineTitleWrapper-sc-1427v1d-5 {

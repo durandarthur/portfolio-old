@@ -3,18 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "CascadiaCode";
-  src: url("/fonts/CascadiaCode.woff2") format("woff2"),
-    url("/fonts/CascadiaCode.ttf") format("truetype");
+  font-family: "RobotoMono";
+  src: url("/fonts/RobotoMono-Regular.ttf") format("truetype");
+  font-weight: normal;
 }
 
 body {
-  font-family: "CascadiaCode", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-}
-
-#asciiImage b {
-  background-color: black;
+  font-family: "RobotoMono";
 }
 
 .animate-blink {
