@@ -14,10 +14,10 @@
   font-weight: normal;
 }
 
-main section img {
+/* main section img {
   width: 20vw;
   height: auto;
-}
+} */
 
 .timeline-item-title {
   font-family: "RobotoMono";
@@ -38,10 +38,6 @@ main section img {
 h2::selection {
   color: inherit;
   background-color: #D7D7D7;
-}
-
-.timeline-verticalstyles__TimelineTitleWrapper-sc-1427v1d-5 {
-  width: 50%!important;
 }
 
 .down-arrow {
@@ -75,3 +71,26 @@ h2::selection {
     margin-top: 0;
   }
 } */
+
+
+/* npm component style overriding */
+
+.timeline-verticalstyles__TimelineTitleWrapper-sc-1427v1d-5 {
+  width: 50%!important;
+}
+
+.timeline-verticalstyles__TimelineVerticalWrapper-sc-1427v1d-0 {
+  padding-block: 0!important;
+}
+
+@media only screen and (max-width: 552px) {
+  .timeline-item-title {
+    display: none;
+  }
+  .timeline-verticalstyles__TimelineTitleWrapper-sc-1427v1d-5 {
+    width: 0!important;
+  }
+  .card-content-wrapper {
+    width: max-content;
+  }
+}

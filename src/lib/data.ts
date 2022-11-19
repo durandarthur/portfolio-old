@@ -59,7 +59,7 @@ export const projects = [
     link: "/",
   },
   {
-    title: 'Site "projectideas"',
+    title: 'Site "projectideas" CRUD',
     link: "/",
   },
   {

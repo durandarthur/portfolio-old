@@ -56,7 +56,7 @@ export default () => {
       });
   };
   return (
-    <section id="contactForm" className="w-2/4">
+    <section id="contactForm" className="w-full px-8 xl:w-2/4 xl:px-0">
       <h1 className="text-4xl mb-4">Besoin de rentrer en contact ?</h1>
       <hr />
       <form onSubmit={handleOnSubmit} className="flex flex-col space-y-2 mt-2">

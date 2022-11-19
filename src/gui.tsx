@@ -7,7 +7,7 @@ export class Gui extends Component {
   render() {
     return (
       <div className="bg-gray-500 text-gray-200">
-        <header className="sticky top-0 z-50 h-[10vh] flex w-full content-center justify-between text-gray-100">
+        <header className="sticky top-0 z-50 h-28 py-5 flex w-full content-center justify-between text-gray-100">
           <div className="flex shrink items-center [&>*]:ml-2 sm:[&>*]:ml-4">
             <a href="/">
               <svg
@@ -91,34 +91,39 @@ export class Gui extends Component {
           />
         </header>
         {/* <hr /> */}
-        <main className="flex flex-col items-center mt-[5vh] sm:mt-[20vh]">
-          <section className="flex justify-center w-full md:w-3/4 2xl:w-7/12 h-[25vh]">
-            <img
-              src="/images/photo.jpg"
-              alt="Photo de profil"
-              className="hidden sm:block w-auto h-full mr-4"
-            />
-            <div className="grid grid-rows-6 gap-1 place-content-between w-min text-center sm:text-left sm:text-sm md:text-md lg:text-xl xl:text-xl 2xl:text-xl 3xl:text-2xl">
-              <p className="self-start font-mono font-bold text-[1em]">Bienvenue chez</p>
-              <h1 className="text-gray-100 row-span-2 font-bold self-center whitespace-nowrap text-[3em] sm:text-[4em]">
-                Arthur DURAND
-              </h1>
-              <h2 className="text-gray-400 text-[1.5em] sm:text-[2em]">
-                Apprenti développeur fullstack
-              </h2>
-              <h3 className="text-gray-300 row-span-2 self-end text-[1em] break-words leading-none">
-                En tant que passionné des nouvelles technologies, je m'engage à utiliser ma passion
-                pour faire avancer les missions des entreprises.
-              </h3>
+        <main className="flex flex-col items-center">
+          <div className="flex flex-col items-center justify-between w-screen h-[calc(100vh-7rem)]">
+            <section className="flex justify-center w-full md:w-3/4 2xl:w-7/12 h-[25vh] mt-[10%]">
+              <img
+                src="/images/photo.jpg"
+                alt="Photo de profil"
+                className="hidden sm:block w-auto h-full mr-4"
+              />
+              <div className="grid grid-rows-6 gap-1 place-content-between w-min text-center sm:text-left sm:text-sm md:text-md lg:text-xl xl:text-xl 2xl:text-xl 3xl:text-2xl">
+                <p className="self-start font-mono font-bold text-[1em]">Bienvenue chez</p>
+                <h1 className="text-gray-100 row-span-2 font-bold self-center whitespace-nowrap text-[3em] sm:text-[4em]">
+                  Arthur DURAND
+                </h1>
+                <h2 className="text-gray-400 text-[1.5em] sm:text-[2em]">
+                  Apprenti développeur fullstack
+                </h2>
+                <h3 className="text-gray-300 row-span-2 self-end text-[1em] break-words leading-none">
+                  En tant que passionné des nouvelles technologies, je m'engage à utiliser ma
+                  passion pour faire avancer les missions des entreprises.
+                </h3>
+              </div>
+            </section>
+            <p className="text-center text-5xl mt-auto">Mon parcours professionel</p>
+            <div className="w-full h-auto hidden sm:flex mb-[64px]">
+              <div className="down-arrow m-auto"></div>
             </div>
-          </section>
-          <p className="text-5xl mt-[20vh] mb-[7vh]">Mon parcours professionel</p>
-          <div className="w-full h-[20vh] hidden 2lg:block">
-            <div className="down-arrow m-auto"></div>
           </div>
-          <div id="timeline" className="w-full lg:w-3/4 5xl:w-1/2 h-full overflow-visible">
+          <div
+            id="timeline"
+            className="w-full pb-8 lg:w-3/4 5xl:w-1/2 h-full overflow-visible"
+          >
             <Chrono
-              mode={window.innerWidth < 1350 ? "VERTICAL" : "VERTICAL_ALTERNATING"}
+              mode={window.innerWidth < 648 ? "VERTICAL" : "VERTICAL_ALTERNATING"}
               items={entriesTitles}
               theme={{
                 primary: "#D7D7D7",
@@ -137,7 +142,7 @@ export class Gui extends Component {
             >
               {entries.map((entry, i) => (
                 <div key={i}>
-                  {/* <time>{entry.title}</time> */}
+                  {window.innerWidth < 552 ? <time>{entry.title}</time> : null}
                   <h1 className="text-4xl">{entry.cardTitle}</h1>
                   <h2 className="text-3xl">{entry.cardSubtitle}</h2>
                   <p className="text-gray-300 text-2xl">{entry.cardDetailedText}</p>
@@ -145,24 +150,27 @@ export class Gui extends Component {
               ))}
             </Chrono>
           </div>
-          <section id="projects" className="grid grid-cols-3 h-auto w-full gap-8 px-8 mb-8">
+          <section
+            id="projects"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 h-auto w-full gap-8 px-8 mb-8"
+          >
             {projects.map((project, i) => (
               <div
                 key={i}
                 className="flex flex-1 h-[20vh] justify-center align-middle bg-gray-400 rounded-xl"
               >
-                <a href={project.link} className="text-2xl my-auto">
+                <a href={project.link} className="text-2xl text-center my-auto">
                   {project.title}
                 </a>
               </div>
             ))}
           </section>
           <section className="w-full px-8 mb-8">
-            <div className="grid grid-cols-3 xl:grid-cols-6 2xl:grid-cols-9 h-auto w-full p-14 gap-14 bg-gray-400 rounded-xl">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-9 h-auto w-full p-14 gap-14 bg-gray-400 rounded-xl">
               {usedTechs.map((tech, i) => (
                 <a href={tech.link} target="_blank" key={i}>
                   <div
-                    className={`flex justify-center align-middle w-auto aspect-square bg-contain bg-no-repeat bg-center rounded-xl text-2xl hover:cursor-pointer [&>*]:hover:visible hover:-m-2`}
+                    className={`flex justify-center align-middle w-auto aspect-square bg-contain bg-no-repeat bg-center rounded-xl text-2xl hover:cursor-pointer [&>*]:hover:visible hover:-m-2 active:-m-2`}
                     style={{ backgroundImage: tech.image }}
                   >
                     <p className="my-auto bg-gray-300 rounded-xl p-2 invisible select-none">
