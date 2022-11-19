@@ -64,7 +64,7 @@ export default () => {
           Votre email:
         </label>
         <input
-          className="rounded-md bg-gray-400 border-transparent 2xl:text-3xl focus:border-gray-200 focus:bg-gray-500 focus:ring-0"
+          className="rounded-md bg-gray-400 border-transparent 2xl:text-3xl focus:border-gray-200 focus:bg-gray-500 focus:ring-0 transition"
           id="email"
           type="email"
           name="_replyto"
@@ -77,7 +77,7 @@ export default () => {
         </label>
         <textarea
           autoComplete="off"
-          className="rounded-md bg-gray-400 border-transparent 2xl:text-3xl !mb-4 focus:border-gray-200 focus:bg-gray-500 focus:ring-0"
+          className="rounded-md bg-gray-400 border-transparent 2xl:text-3xl !mb-4 focus:border-gray-200 focus:bg-gray-500 focus:ring-0 transition"
           id="message"
           name="message"
           onChange={handleOnChange}
@@ -88,7 +88,7 @@ export default () => {
         <button
           type="submit"
           disabled={status.submitting || status.submitted}
-          className="font-semibold text-2xl p-1 2xl:py-4 2xl:px-10 border-2 rounded-3xl h-min self-center box-content disabled:bg-green-500 disabled:border-transparent hover:cursor-pointer hover:bg-gray-200 hover:text-gray-400 mr-2 sm:mr-4 2xl:text-3xl"
+          className="font-semibold text-2xl p-1 2xl:py-4 2xl:px-10 border-2 rounded-3xl h-min self-center box-content disabled:bg-green-500 disabled:border-transparent hover:cursor-pointer hover:bg-gray-200 hover:text-gray-400 mr-2 sm:mr-4 2xl:text-3xl transition"
         >
           {!status.submitting ? (!status.submitted ? "Envoyer" : "Message envoyé !") : "Envoi..."}
         </button>

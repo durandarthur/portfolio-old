@@ -46,7 +46,7 @@ export class Gui extends Component {
             </a>
             <a href="https://www.linkedin.com/in/arthur-durand-0967741b9/">
               <svg
-                className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-gray-200 hover:fill-[#0E76A8] rounded-full"
+                className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-gray-200 hover:fill-[#0E76A8] rounded-full transition"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 3333 3333"
                 shapeRendering="geometricPrecision"
@@ -60,7 +60,7 @@ export class Gui extends Component {
             </a>
             <a href="https://github.com/durandarthur">
               <svg
-                className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-current invert hover:invert-0 hover:bg-white hover:border-2 rounded-full"
+                className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-current invert hover:invert-0 hover:bg-white hover:border-2 rounded-full transition"
                 xmlns="http://www.w3.org/2000/svg"
                 shapeRendering="geometricPrecision"
                 textRendering="geometricPrecision"
@@ -87,7 +87,7 @@ export class Gui extends Component {
           <input
             type="button"
             value="CV"
-            className="p-2 md:p-3 2xl:p-4 border-2 rounded-2xl h-min self-center box-content hover:cursor-pointer hover:bg-gray-200 hover:text-gray-400 mr-2 sm:mr-4 text-lg sm:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl"
+            className="p-2 md:p-3 2xl:p-4 border-2 rounded-2xl h-min self-center box-content hover:cursor-pointer hover:bg-gray-200 hover:text-gray-400 mr-2 sm:mr-4 text-lg sm:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl transition"
           />
         </header>
         {/* <hr /> */}
@@ -95,9 +95,10 @@ export class Gui extends Component {
           <div className="flex flex-col items-center justify-between w-screen h-[calc(100vh-7rem)]">
             <section className="flex justify-center w-full md:w-3/4 2xl:w-7/12 h-[25vh] mt-[10%]">
               <img
+                id="photo"
                 src="/images/photo.jpg"
                 alt="Photo de profil"
-                className="hidden sm:block w-auto h-full mr-4"
+                className="hidden sm:block w-auto h-full mr-4 hover:drop-shadow-[35px_35px_0_rgba(0,0,0,0.5)] transition"
               />
               <div className="grid grid-rows-6 gap-1 place-content-between w-min text-center sm:text-left sm:text-sm md:text-md lg:text-xl xl:text-xl 2xl:text-xl 3xl:text-2xl">
                 <p className="self-start font-mono font-bold text-[1em]">Bienvenue chez</p>
@@ -118,10 +119,7 @@ export class Gui extends Component {
               <div className="down-arrow m-auto"></div>
             </div>
           </div>
-          <div
-            id="timeline"
-            className="w-full pb-8 lg:w-3/4 5xl:w-1/2 h-full overflow-visible"
-          >
+          <div id="timeline" className="w-full pb-8 lg:w-3/4 5xl:w-1/2 h-full overflow-visible">
             <Chrono
               mode={window.innerWidth < 648 ? "VERTICAL" : "VERTICAL_ALTERNATING"}
               items={entriesTitles}
@@ -155,14 +153,13 @@ export class Gui extends Component {
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 h-auto w-full gap-8 px-8 mb-8"
           >
             {projects.map((project, i) => (
-              <div
-                key={i}
-                className="flex flex-1 h-[20vh] justify-center align-middle bg-gray-400 rounded-xl"
-              >
-                <a href={project.link} className="text-2xl text-center my-auto">
-                  {project.title}
-                </a>
-              </div>
+              <a key={i} href={project.link} target="_blank">
+                <div
+                  className="flex flex-1 h-[20vh] justify-center align-middle bg-gray-400 rounded-xl [&>*]:hover:text-3xl"
+                >
+                  <p className="text-2xl text-center my-auto transition-all">{project.title}</p>
+                </div>
+              </a>
             ))}
           </section>
           <section className="w-full px-8 mb-8">
@@ -170,7 +167,7 @@ export class Gui extends Component {
               {usedTechs.map((tech, i) => (
                 <a href={tech.link} target="_blank" key={i}>
                   <div
-                    className={`flex justify-center align-middle w-auto aspect-square bg-contain bg-no-repeat bg-center rounded-xl text-2xl hover:cursor-pointer [&>*]:hover:visible hover:-m-2 active:-m-2`}
+                    className={`flex justify-center align-middle w-auto aspect-square bg-contain bg-no-repeat bg-center rounded-xl text-2xl transition-all hover:cursor-pointer [&>*]:hover:visible hover:-m-2 active:-m-2`}
                     style={{ backgroundImage: tech.image }}
                   >
                     <p className="my-auto bg-gray-300 rounded-xl p-2 invisible select-none">

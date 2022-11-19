@@ -56,15 +56,15 @@ export const entriesTitles = [
 export const projects = [
   {
     title: "Site portfolio",
-    link: "/",
+    link: "https://github.com/durandarthur/portfolio",
   },
   {
-    title: 'Site "projectideas" CRUD',
-    link: "/",
+    title: 'Plus en développement...',
+    link: "#",
   },
   {
     title: "Plus en développement...",
-    link: "/",
+    link: "#",
   },
 ];
 
