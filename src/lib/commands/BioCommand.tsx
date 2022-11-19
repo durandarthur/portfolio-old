@@ -72,7 +72,7 @@ export default class BioCommand extends Command {
 
     return (
       <div>
-        <div id="asciiImage" dangerouslySetInnerHTML={{ __html: ImageHTML }}/>
+        <div id="asciiImage" className="leading-tight" dangerouslySetInnerHTML={{ __html: ImageHTML }}/>
         <p>
           {"\n\n"}
           Je m'appelle Arthur. Développeur web passionné des nouvelles technologies, je m'engage à
