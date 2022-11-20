@@ -45,7 +45,7 @@ export default () => {
     setStatus((prevStatus: any) => ({ ...prevStatus, submitting: true }));
     axios({
       method: "POST",
-      url: "https://formspree.io/f/myyvlqrq",
+      url: process.env.FORM_ENDPOINT,
       data: inputs,
     })
       .then((response) => {
