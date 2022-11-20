@@ -1,5 +1,3 @@
-import * as dotenv from 'dotenv';
-dotenv.config();
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Gui from "./gui";
