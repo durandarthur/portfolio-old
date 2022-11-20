@@ -45,7 +45,7 @@ export default () => {
     setStatus((prevStatus: any) => ({ ...prevStatus, submitting: true }));
     axios({
       method: "POST",
-      url: process.env.REACT_APP_FORM_ENDPOINT,
+      url: process.env.FORM_ENDPOINT,
       data: inputs,
     })
       .then((response) => {
