@@ -14,6 +14,10 @@
   font-weight: normal;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 #photo:hover {
   transform: translate(-35px,-35px);
 }

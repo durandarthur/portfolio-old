@@ -59,7 +59,7 @@ export const projects = [
     link: "https://github.com/durandarthur/portfolio",
   },
   {
-    title: 'Plus en développement...',
+    title: "Plus en développement...",
     link: "#",
   },
   {
@@ -90,9 +90,34 @@ export const usedTechs = [
     link: "https://fr.wikipedia.org/wiki/TypeScript",
   },
   {
+    name: "Axios",
+    image: "url(/images/logos/axios.png)",
+    link: "https://axios-http.com/",
+  },
+  {
     name: "Node.js",
     image: "url(/images/logos/nodejs.png)",
     link: "https://nodejs.org/fr/",
+  },
+  {
+    name: "Express.js",
+    image: "url(/images/logos/express.png)",
+    link: "https://expressjs.com/fr/",
+  },
+  {
+    name: "GraphQL",
+    image: "url(/images/logos/graphql.png)",
+    link: "https://graphql.org/",
+  },
+  {
+    name: "PostgreSQL",
+    image: "url(/images/logos/postgres.png)",
+    link: "https://www.postgresql.org/",
+  },
+  {
+    name: "Knex.js",
+    image: "url(/images/logos/knex.png)",
+    link: "https://knexjs.org/",
   },
   {
     name: "React",
@@ -110,6 +135,11 @@ export const usedTechs = [
     link: "https://nextjs.org/",
   },
   {
+    name: "Vercel",
+    image: "url(/images/logos/vercel.png)",
+    link: "https://vercel.com/",
+  },
+  {
     name: "SASS",
     image: "url(/images/logos/sass.png)",
     link: "https://fr.wikipedia.org/wiki/Sass_(langage)",
@@ -124,15 +154,16 @@ export const usedTechs = [
     image: "url(/images/logos/vite.png)",
     link: "https://vitejs.dev/",
   },
+
   {
     name: "Git",
     image: "url(/images/logos/git.png)",
     link: "https://fr.wikipedia.org/wiki/Git",
   },
   {
-    name: "Vercel",
-    image: "url(/images/logos/vercel.png)",
-    link: "https://vercel.com/",
+    name: "Netlify",
+    image: "url(/images/logos/netlify.png)",
+    link: "https://www.netlify.com/",
   },
   {
     name: "VSCode",

@@ -70,7 +70,7 @@ export class Gui extends Component {
         {/* <hr /> */}
         <main className="flex flex-col items-center">
           <div className="flex flex-col items-center justify-between w-screen h-[calc(100vh-7rem)]">
-            <section className="flex justify-center w-full md:w-3/4 2xl:w-7/12 h-[25vh] mt-[10%]">
+            <section className="flex justify-center w-full md:w-3/4 2xl:w-7/12 h-1/4 lg:h-1/2 2xl:h-1/3 mt-[10%] lg:mt-auto">
               <img
                 id="photo"
                 src="/images/photo.jpg"
@@ -91,7 +91,7 @@ export class Gui extends Component {
                 </h3>
               </div>
             </section>
-            <p className="text-center text-5xl mt-auto">Mon parcours professionnel</p>
+            <p className="text-center text-5xl mt-auto lg:-mb-12">Mon parcours professionnel</p>
             <div className="w-full h-auto hidden sm:flex mb-[64px]">
               <div className="down-arrow m-auto"></div>
             </div>
@@ -131,14 +131,14 @@ export class Gui extends Component {
           >
             {projects.map((project, i) => (
               <a key={i} href={project.link} target="_blank">
-                <div className="flex flex-1 h-[20vh] justify-center align-middle bg-gray-400 rounded-xl [&>*]:hover:text-3xl">
+                <div className="flex flex-1 h-[20vh] justify-center align-middle bg-gray-400 rounded-xl [&>*]:hover:text-3xl hover:ring ring-gray-100 hover:bg-gray-500 transition-all">
                   <p className="text-2xl text-center my-auto transition-all">{project.title}</p>
                 </div>
               </a>
             ))}
           </section>
           <section className="w-full px-8 mb-8">
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-9 h-auto w-full p-14 gap-14 bg-gray-400 rounded-xl">
+            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 2xl:grid-cols-10 h-auto w-full p-14 gap-14 bg-gray-400 rounded-xl">
               {usedTechs.map((tech, i) => (
                 <a href={tech.link} target="_blank" key={i}>
                   <div
