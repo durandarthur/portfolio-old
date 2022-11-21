@@ -91,7 +91,7 @@ export class Gui extends Component {
                 </h3>
               </div>
             </section>
-            <p className="text-center text-5xl mt-auto lg:-mb-12">Mon parcours professionnel</p>
+            <p className="text-center text-5xl mt-auto lg:-mb-12 2xl:mb-0">Mon parcours professionnel</p>
             <div className="w-full h-auto hidden sm:flex mb-[64px]">
               <div className="down-arrow m-auto"></div>
             </div>
