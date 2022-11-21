@@ -6,7 +6,7 @@ import { loadCommands } from "./lib/Command";
 export default function App() {
 
   if (window.innerWidth < 1324) {
-    window.location.replace("http://localhost:5173/gui.html");
+    window.location.replace("https://portfolio-durandarthur.vercel.app/gui.html");
   }
   
   document.onmousedown = (e) => {
@@ -15,10 +15,6 @@ export default function App() {
 
   const containerRef = React.useRef<HTMLDivElement>(null);
   const commands = useCommands();
-
-  if (!commands.state.entries) {
-    
-  }
 
   const _loadCommands = React.useCallback(async () => {
     const commandObject = await loadCommands();

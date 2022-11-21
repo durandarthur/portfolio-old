@@ -23,7 +23,7 @@ export const entries = [
   {
     title: "2019-2021",
     cardTitle: "Bac+2 Spécialité informatique",
-    cardSubtitle: "CESI Ecole D'Ingénieurs, Labège",
+    cardSubtitle: "CESI Ecole d'Ingénieurs, Labège",
     cardDetailedText:
       "Formation C/C++, SQL, PHP, structures de données, algorithmes de tri/performance algorithmes",
   },
