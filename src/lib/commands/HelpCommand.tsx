@@ -7,7 +7,7 @@ export default class HelpCommand extends Command {
   
   render({ commands, commandDescArr }: CommandRenderOptions): string | JSX.Element {
     const commandList = ["bio","clear","help","socials","startx"];
-    const descriptionList = ["Affiche ma biographie.","Nettoie le terminal.","Liste les commandes disponibles.","Liste de mes liens sociaux.","Change le site en interface graphique."];
+    const descriptionList = ["Affiche ma biographie.","Nettoie le terminal.","Liste les commandes disponibles.","Liste de mes liens sociaux.","Passe vers le site portfolio complet."];
     return (
       <div>
         <div className="mt-3">

@@ -42,7 +42,8 @@ export function useCommands() {
     const commandFunctionOptions = { command: commandName };
 
     if (commandName === "clear") {
-      return state.setEntries([{ command: null, output: null, status: CommandStatus.Succeeded }]);
+      // return state.setEntries([{ command: null, output: null, status: CommandStatus.Succeeded }]);
+      return state.setEntries(DEFAULT_ENTRIES);
     }
 
     if (commandName === "startx") {

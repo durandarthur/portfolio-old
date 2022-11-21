@@ -16,6 +16,10 @@ export default function App() {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const commands = useCommands();
 
+  if (!commands.state.entries) {
+    
+  }
+
   const _loadCommands = React.useCallback(async () => {
     const commandObject = await loadCommands();
     commands.state.setCommandMap(commandObject.commandMap);
@@ -28,19 +32,13 @@ export default function App() {
 
   return (
     <div ref={containerRef} className="m-12">
+
       {commands.state.entries.map((entry, idx) => {
         const commandEntry = entry.command !== null ? entry : null;
         const showInputField = typeof entry.command !== "undefined" || !entry.output;
 
         return (
           <div key={idx} data-status={commandEntry?.status} data-entry={idx}>
-            {showInputField ? (
-              <Input
-                entry={commandEntry}
-                handleNewCommand={(command) => commands.handleNewCommand(command, idx)}
-              />
-            ) : null}
-
             <div
               style={{ lineHeight: "normal" }}
               className="ml-[52px] whitespace-pre-wrap"
@@ -48,6 +46,12 @@ export default function App() {
             >
               {entry.output}
             </div>
+            {showInputField ? (
+              <Input
+                entry={commandEntry}
+                handleNewCommand={(command) => commands.handleNewCommand(command, idx)}
+              />
+            ) : null}
           </div>
         );
       })}
