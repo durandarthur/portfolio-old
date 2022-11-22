@@ -82,7 +82,7 @@ export class Gui extends Component {
             <section className="flex justify-center w-full md:w-3/4 2xl:w-7/12 h-1/3 lg:h-1/2 2xl:h-1/3 mt-[10%] lg:mt-auto">
               <img
                 id="photo"
-                src="/images/photo.jpg"
+                src="/images/photo.webp"
                 alt="Photo de profil"
                 className="hidden sm:block w-auto h-full mr-4 hover:drop-shadow-[35px_35px_0_rgba(0,0,0,0.5)] transition"
               />

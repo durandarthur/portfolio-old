@@ -71,103 +71,103 @@ export const projects = [
 export const usedTechs = [
   {
     name: "HTML",
-    image: "url(/images/logos/html.png)",
+    image: "url(/images/logos/html.webp)",
     link: "https://fr.wikipedia.org/wiki/Hypertext_Markup_Language",
   },
   {
     name: "CSS",
-    image: "url(/images/logos/css.png)",
+    image: "url(/images/logos/css.webp)",
     link: "https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade",
   },
   {
     name: "JavaScript",
-    image: "url(/images/logos/js.png)",
+    image: "url(/images/logos/js.webp)",
     link: "https://fr.wikipedia.org/wiki/JavaScript",
   },
   {
     name: "TypeScript",
-    image: "url(/images/logos/ts.png)",
+    image: "url(/images/logos/ts.webp)",
     link: "https://fr.wikipedia.org/wiki/TypeScript",
   },
   {
     name: "Axios",
-    image: "url(/images/logos/axios.png)",
+    image: "url(/images/logos/axios.webp)",
     link: "https://axios-http.com/",
   },
   {
     name: "Node.js",
-    image: "url(/images/logos/nodejs.png)",
+    image: "url(/images/logos/nodejs.webp)",
     link: "https://nodejs.org/fr/",
   },
   {
     name: "Express.js",
-    image: "url(/images/logos/express.png)",
+    image: "url(/images/logos/express.webp)",
     link: "https://expressjs.com/fr/",
   },
   {
     name: "GraphQL",
-    image: "url(/images/logos/graphql.png)",
+    image: "url(/images/logos/graphql.webp)",
     link: "https://graphql.org/",
   },
   {
     name: "PostgreSQL",
-    image: "url(/images/logos/postgres.png)",
+    image: "url(/images/logos/postgres.webp)",
     link: "https://www.postgresql.org/",
   },
   {
     name: "Knex.js",
-    image: "url(/images/logos/knex.png)",
+    image: "url(/images/logos/knex.webp)",
     link: "https://knexjs.org/",
   },
   {
     name: "React",
-    image: "url(/images/logos/react.png)",
+    image: "url(/images/logos/react.webp)",
     link: "https://fr.reactjs.org/",
   },
   {
     name: "TailwindCSS",
-    image: "url(/images/logos/tailwind.png)",
+    image: "url(/images/logos/tailwind.webp)",
     link: "https://tailwindcss.com/",
   },
   {
     name: "Next.js",
-    image: "url(/images/logos/nextjs.png)",
+    image: "url(/images/logos/nextjs.webp)",
     link: "https://nextjs.org/",
   },
   {
     name: "Vercel",
-    image: "url(/images/logos/vercel.png)",
+    image: "url(/images/logos/vercel.webp)",
     link: "https://vercel.com/",
   },
   {
     name: "SASS",
-    image: "url(/images/logos/sass.png)",
+    image: "url(/images/logos/sass.webp)",
     link: "https://fr.wikipedia.org/wiki/Sass_(langage)",
   },
   {
     name: "postCSS",
-    image: "url(/images/logos/postcss.png)",
+    image: "url(/images/logos/postcss.webp)",
     link: "https://postcss.org/",
   },
   {
     name: "Vite",
-    image: "url(/images/logos/vite.png)",
+    image: "url(/images/logos/vite.webp)",
     link: "https://vitejs.dev/",
   },
 
   {
     name: "Git",
-    image: "url(/images/logos/git.png)",
+    image: "url(/images/logos/git.webp)",
     link: "https://fr.wikipedia.org/wiki/Git",
   },
   {
     name: "Netlify",
-    image: "url(/images/logos/netlify.png)",
+    image: "url(/images/logos/netlify.webp)",
     link: "https://www.netlify.com/",
   },
   {
     name: "VSCode",
-    image: "url(/images/logos/vscode.png)",
+    image: "url(/images/logos/vscode.webp)",
     link: "https://code.visualstudio.com/",
   },
 ];
