@@ -95,15 +95,16 @@ export default () => {
       </form>
       {status.info.error && <div className="error">Erreur: {status.info.msg}</div>}
       {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
-      <div className="w-full flex justify-end items-end mt-4">
+      <div className="w-full flex justify-center sm:justify-end items-center sm:items-end mt-4">
         <a className="font-mono underline text-xl" href="mailto:durandarthur09@outlook.fr">durandarthur09@outlook.fr</a>
         <svg
+          aria-label="Logo Mail"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 23 20"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 ml-2 sm:w-12 sm:h-12 flex-no-shrink fill-current"
+          className="w-6 h-6 ml-2 sm:w-12 sm:h-12 flex-no-shrink fill-current hidden sm:block"
         >
           <path
             strokeLinecap="round"

@@ -5,15 +5,22 @@ import { entries, entriesTitles, projects, usedTechs } from "./lib/data";
 
 export class Gui extends Component {
   render() {
+    const cardText = document.getElementsByClassName("rc-card-text");
+    for (let i = 0; i < cardText.length; i++) {
+      cardText[i].setAttribute("aria-expanded", "true");
+    }
     return (
       <div className="bg-gray-500 text-gray-200">
         <header className="sticky top-0 z-50 h-28 py-5 flex w-full content-center justify-between text-gray-100">
           <div className="flex shrink items-center [&>*]:ml-2 sm:[&>*]:ml-4">
-            <a href="/">
+            <a href="/" aria-label="Lien du site en version CLI" title="Site version CLI">
               <svg
+                aria-label="Logo Durand Arthur"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 484.99994 512"
                 className="w-10 h-10 sm:w-16 sm:h-16 2xl:w-20 2xl:h-20 flex-no-shrink fill-gray-100 lg:fill-transparent lg:stroke-gray-100 lg:stroke-[5px] lg:hover:fill-gray-100 lg:transition"
+                width={319}
+                height={316}
               >
                 <path
                   className="cls-1"
@@ -21,8 +28,9 @@ export class Gui extends Component {
                 />
               </svg>
             </a>
-            <a href="https://www.linkedin.com/in/arthur-durand-0967741b9/">
+            <a href="https://www.linkedin.com/in/arthur-durand-0967741b9/" aria-label="LinkedIn" title="LinkedIn">
               <svg
+                aria-label="Logo LinkedIn"
                 className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-gray-200 hover:fill-[#0E76A8] rounded-full transition"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 3333 3333"
@@ -35,8 +43,9 @@ export class Gui extends Component {
                 <path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm-215 1336h342v175h5c48-86 164-175 338-175 361 0 428 225 428 517v596h-357v-528c0-126-3-288-186-288-186 0-214 137-214 279v537h-357V1336zm-247-309c0 102-83 186-186 186-102 0-186-83-186-186 0-102 83-186 186-186 102 0 186 83 186 186zm-371 309h371v1113H834V1336z" />
               </svg>
             </a>
-            <a href="https://github.com/durandarthur">
+            <a href="https://github.com/durandarthur" aria-label="GitHub" title="GitHub">
               <svg
+                aria-label="Logo GitHub"
                 className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-current invert hover:invert-0 hover:bg-white hover:border-2 rounded-full transition"
                 xmlns="http://www.w3.org/2000/svg"
                 shapeRendering="geometricPrecision"
@@ -51,13 +60,13 @@ export class Gui extends Component {
             </a>
           </div>
           <nav className="flex flex-auto items-center justify-center text-lg sm:text-xl md:text-2xl xl:text-3xl lg:justify-end [&>*]:mr-1 sm:[&>*]:mr-2 md:[&>*]:mr-3 lg:[&>*]:mr-4">
-            <a href="#timeline" className="hover:underline">
+            <a href="#timeline" className="hover:underline invisible sm:visible">
               Expérience
             </a>
-            <a href="#projects" className="hover:underline">
+            <a href="#projects" className="hover:underline hidden sm:block">
               Projets
             </a>
-            <a href="#contactForm" className="hover:underline">
+            <a href="#contactForm" className="hover:underline hidden sm:block">
               Contact
             </a>
           </nav>
@@ -70,7 +79,7 @@ export class Gui extends Component {
         {/* <hr /> */}
         <main className="flex flex-col items-center">
           <div className="flex flex-col items-center justify-between w-screen h-[calc(100vh-7rem)]">
-            <section className="flex justify-center w-full md:w-3/4 2xl:w-7/12 h-1/4 lg:h-1/2 2xl:h-1/3 mt-[10%] lg:mt-auto">
+            <section className="flex justify-center w-full md:w-3/4 2xl:w-7/12 h-1/3 lg:h-1/2 2xl:h-1/3 mt-[10%] lg:mt-auto">
               <img
                 id="photo"
                 src="/images/photo.jpg"
@@ -91,8 +100,8 @@ export class Gui extends Component {
                 </h3>
               </div>
             </section>
-            <p className="text-center text-5xl mt-auto lg:-mb-12 2xl:mb-0">Mon parcours professionnel</p>
-            <div className="w-full h-auto hidden sm:flex mb-[64px]">
+            <p className="text-center text-4xl lg:text-5xl mt-auto -mb-6 sm:mb-0 lg:-mb-12 2xl:mb-0">Mon parcours professionnel</p>
+            <div className="w-full h-auto mb-[64px]">
               <div className="down-arrow m-auto"></div>
             </div>
           </div>
@@ -118,9 +127,9 @@ export class Gui extends Component {
               {entries.map((entry, i) => (
                 <div key={i}>
                   {window.innerWidth < 552 ? <time>{entry.title}</time> : null}
-                  <h1 className="text-4xl">{entry.cardTitle}</h1>
-                  <h2 className="text-3xl">{entry.cardSubtitle}</h2>
-                  <p className="text-gray-300 text-2xl">{entry.cardDetailedText}</p>
+                  <h1 className="text-2xl lg:text-4xl">{entry.cardTitle}</h1>
+                  <h2 className="text-xl lg:text-3xl">{entry.cardSubtitle}</h2>
+                  <p className="text-gray-300 text-lg lg:text-2xl">{entry.cardDetailedText}</p>
                 </div>
               ))}
             </Chrono>
@@ -138,9 +147,9 @@ export class Gui extends Component {
             ))}
           </section>
           <section className="w-full px-8 mb-8">
-            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 2xl:grid-cols-10 h-auto w-full p-14 gap-14 bg-gray-400 rounded-xl">
+            <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 2xl:grid-cols-10 h-auto w-full p-4 lg:p-14 gap-4 lg:gap-14 bg-gray-400 rounded-xl">
               {usedTechs.map((tech, i) => (
-                <a href={tech.link} target="_blank" key={i}>
+                <a href={tech.link} target="_blank" key={i} aria-label={tech.name} title={tech.name}>
                   <div
                     className={`flex justify-center align-middle w-auto aspect-square bg-contain bg-no-repeat bg-center rounded-xl text-2xl transition-all hover:cursor-pointer [&>*]:hover:visible hover:-m-2 active:-m-2`}
                     style={{ backgroundImage: tech.image }}
