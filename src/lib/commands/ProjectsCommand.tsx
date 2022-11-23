@@ -3,7 +3,7 @@ import { projects } from "../data";
 
 export default class ProjectsCommand extends Command {
   constructor() {
-    super({ name: "projects", description: "Afffiche mes projets terminés." });
+    super({ name: "projects", description: "Affiche mes projets terminés." });
   }
 
   render(): string | JSX.Element {

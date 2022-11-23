@@ -3,7 +3,7 @@ import { entries } from "../data";
 
 export default class TimelineCommand extends Command {
   constructor() {
-    super({ name: "timeline", description: "Afffiche mon parcours scolaire." });
+    super({ name: "timeline", description: "Affiche mon parcours scolaire." });
   }
 
   render(): string | JSX.Element {

@@ -31,7 +31,8 @@ export async function loadCommands() {
     import("./commands/ClearCommand"),
     import("./commands/ContactCommand"),
     import("./commands/ProjectsCommand"),
-    import("./commands/TimelineCommand")
+    import("./commands/TimelineCommand"),
+    import("./commands/TechsCommand")
   ]);
 
   for (const file of commands) {

@@ -35,6 +35,12 @@ export default function App() {
 
         return (
           <div key={idx} data-status={commandEntry?.status} data-entry={idx}>
+            {showInputField ? (
+              <Input
+                entry={commandEntry}
+                handleNewCommand={(command) => commands.handleNewCommand(command, idx)}
+              />
+            ) : null}
             <div
               style={{ lineHeight: "normal" }}
               className="ml-[52px] whitespace-pre-wrap"
@@ -42,12 +48,7 @@ export default function App() {
             >
               {entry.output}
             </div>
-            {showInputField ? (
-              <Input
-                entry={commandEntry}
-                handleNewCommand={(command) => commands.handleNewCommand(command, idx)}
-              />
-            ) : null}
+            
           </div>
         );
       })}
