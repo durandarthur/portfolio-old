@@ -41,6 +41,10 @@ export function useCommands() {
     const fullCommand = isSudo ? `sudo ${commandName}` : commandName;
     const commandFunctionOptions = { command: commandName };
 
+    if (commandName === "contact") {
+      return window.location.href = "/gui.html#contactForm";
+    }
+
     if (commandName === "clear") {
       // return state.setEntries([{ command: null, output: null, status: CommandStatus.Succeeded }]);
       return state.setEntries(DEFAULT_ENTRIES);

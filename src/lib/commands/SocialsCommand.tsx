@@ -8,8 +8,8 @@ export default class SocialsCommand extends Command {
   render(): string | JSX.Element {
     return (
       <ul>
-        <li><a onMouseDown={() => window.open("https://github.com/durandarthur","_blank")} href="https://github.com/durandarthur" target="_blank" style={{textDecoration:"underline"}}>GitHub</a></li>
-        <li><a onMouseDown={() => window.open("https://www.linkedin.com/in/arthur-durand-0967741b9/","_blank")} href="https://www.linkedin.com/in/arthur-durand-0967741b9/" target="_blank" style={{textDecoration:"underline"}}>LinkedIn</a></li>
+        <li><a href="https://github.com/durandarthur" target="_blank" className="underline">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/arthur-durand-0967741b9/" target="_blank" className="underline">LinkedIn</a></li>
       </ul>
     );
   }
