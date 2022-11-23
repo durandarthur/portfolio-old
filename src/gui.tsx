@@ -28,7 +28,11 @@ export class Gui extends Component {
                 />
               </svg>
             </a>
-            <a href="https://www.linkedin.com/in/arthur-durand-0967741b9/" aria-label="LinkedIn" title="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/arthur-durand-0967741b9/"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
               <svg
                 aria-label="Logo LinkedIn"
                 className="w-8 h-8 sm:w-16 sm:h-16 flex-no-shrink fill-gray-200 hover:fill-[#0E76A8] rounded-full transition"
@@ -70,11 +74,13 @@ export class Gui extends Component {
               Contact
             </a>
           </nav>
-          <input
-            type="button"
-            value="CV"
+          <a
+            href="/CV_Arthur_Durand_2022.pdf"
+            download
             className="p-2 md:p-3 2xl:p-4 border-2 rounded-2xl h-min self-center box-content hover:cursor-pointer hover:bg-gray-200 hover:text-gray-400 mr-2 sm:mr-4 text-lg sm:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl transition"
-          />
+          >
+            CV
+          </a>
         </header>
         {/* <hr /> */}
         <main className="flex flex-col items-center">
@@ -100,7 +106,9 @@ export class Gui extends Component {
                 </h3>
               </div>
             </section>
-            <p className="text-center text-4xl lg:text-5xl mt-auto -mb-6 sm:mb-0 lg:-mb-12 2xl:mb-0">Mon parcours professionnel</p>
+            <p className="text-center text-4xl lg:text-5xl mt-auto -mb-6 sm:mb-0 lg:-mb-12 2xl:mb-0">
+              Mon parcours professionnel
+            </p>
             <div className="w-full h-auto mb-[64px]">
               <div className="down-arrow m-auto"></div>
             </div>
@@ -149,7 +157,13 @@ export class Gui extends Component {
           <section className="w-full px-8 mb-8">
             <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 2xl:grid-cols-10 h-auto w-full p-4 lg:p-14 gap-4 lg:gap-14 bg-gray-400 rounded-xl">
               {usedTechs.map((tech, i) => (
-                <a href={tech.link} target="_blank" key={i} aria-label={tech.name} title={tech.name}>
+                <a
+                  href={tech.link}
+                  target="_blank"
+                  key={i}
+                  aria-label={tech.name}
+                  title={tech.name}
+                >
                   <div
                     className={`flex justify-center align-middle w-auto aspect-square bg-contain bg-no-repeat bg-center rounded-xl text-2xl transition-all hover:cursor-pointer [&>*]:hover:visible hover:-m-2 active:-m-2`}
                     style={{ backgroundImage: tech.image }}
