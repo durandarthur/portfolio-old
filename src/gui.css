@@ -80,7 +80,7 @@ h2::selection {
     pointer-events: none;
 }
 
-section {
+.timeline section {
     pointer-events: none;
 }
 
