@@ -3,46 +3,46 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "RobotoMono";
-  src: url("/fonts/RobotoMono-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-display: swap;
+    font-family: 'RobotoMono';
+    src: url('/fonts/RobotoMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "RobotoMono";
-  src: url("/fonts/RobotoMono-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-display: swap;
+    font-family: 'RobotoMono';
+    src: url('/fonts/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
 }
 
 html {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 #photo:hover {
-  transform: translate(-35px,-35px);
+    transform: translate(-35px, -35px);
 }
 
 .timeline-item-title {
-  font-family: "RobotoMono";
-  white-space: pre-wrap;
-  text-align: center !important;
+    font-family: 'RobotoMono';
+    white-space: pre-wrap;
+    text-align: center !important;
 }
 
 ::-moz-selection {
-  color: inherit;
-  background-color: #333333;
+    color: inherit;
+    background-color: #333333;
 }
 
 ::selection {
-  color: inherit;
-  background-color: #333333;
+    color: inherit;
+    background-color: #333333;
 }
 
 h2::selection {
-  color: inherit;
-  background-color: #D7D7D7;
+    color: inherit;
+    background-color: #d7d7d7;
 }
 
 .down-arrow {
@@ -53,36 +53,37 @@ h2::selection {
     animation: jumpInfinite 1.5s infinite;
 }
 
-@keyframes jumpInfinite { /*order matters!*/
-  0% {
-    transform: translateY(0px) rotateZ(45deg) ;
-  }
-  50% {
-    transform: translateY(32px) rotateZ(45deg) ;
-  }
-  100% {
-    transform: translateY(0px) rotateZ(45deg) ;
-  }
+@keyframes jumpInfinite {
+    /*order matters!*/
+    0% {
+        transform: translateY(0px) rotateZ(45deg);
+    }
+    50% {
+        transform: translateY(32px) rotateZ(45deg);
+    }
+    100% {
+        transform: translateY(0px) rotateZ(45deg);
+    }
 }
 
 /* npm component style overriding */
 
 .timeline-verticalstyles__TimelineTitleWrapper-sc-1427v1d-5 {
-  width: 50%!important;
+    width: 50% !important;
 }
 
 .timeline-verticalstyles__TimelineVerticalWrapper-sc-1427v1d-0 {
-  padding-block: 0!important;
+    padding-block: 0 !important;
 }
 
 @media only screen and (max-width: 552px) {
-  .timeline-item-title {
-    display: none;
-  }
-  .timeline-verticalstyles__TimelineTitleWrapper-sc-1427v1d-5 {
-    width: 0!important;
-  }
-  .card-content-wrapper {
-    width: max-content;
-  }
+    .timeline-item-title {
+        display: none;
+    }
+    .timeline-verticalstyles__TimelineTitleWrapper-sc-1427v1d-5 {
+        width: 0 !important;
+    }
+    .card-content-wrapper {
+        width: max-content;
+    }
 }

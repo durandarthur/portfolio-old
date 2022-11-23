@@ -1,13 +1,11 @@
-import { Command } from "../Command";
+import { Command } from '../Command';
 
 export default class ClearCommand extends Command {
-  constructor() {
-    super({ name: "clear", description: "Nettoie le terminal." });
-  }
+    constructor() {
+        super({ name: 'clear', description: 'Nettoie le terminal.' });
+    }
 
-  render(): string | JSX.Element {
-    return (
-      <p>developing command...</p>
-    );
-  }
+    render(): string | JSX.Element {
+        return <p>developing command...</p>;
+    }
 }
