@@ -78,8 +78,8 @@ export default class BioCommand extends Command {
                 />
                 <p>
                     {'\n\n'}
-                    Je m'appelle Arthur. Développeur web passionné des nouvelles technologies, je
-                    m'engage à faire avancer les missions des entreprises.
+                    Je m&apos;appelle Arthur. Développeur web passionné des nouvelles technologies,
+                    je m&apos;engage à faire avancer les missions des entreprises.
                 </p>
             </div>
         );

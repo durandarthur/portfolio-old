@@ -22,8 +22,14 @@ export default class TechsCommand extends Command {
         });
         return (
             <section>
-                {techs.map((tech) => (
-                    <a href={tech.link} target='blank' className='underline'>
+                {techs.map((tech, i) => (
+                    <a
+                        href={tech.link}
+                        target='blank'
+                        rel='noreferrer'
+                        className='underline'
+                        key={i}
+                    >
                         {tech.name + '\n'}
                     </a>
                 ))}

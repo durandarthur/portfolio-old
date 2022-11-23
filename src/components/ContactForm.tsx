@@ -1,8 +1,14 @@
-import { useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import axios from 'axios';
 
-export default () => {
-    const [status, setStatus]: any = useState({
+type Status = {
+    submitted?: boolean;
+    submitting?: boolean;
+    info: { error: boolean; msg: boolean | null | string };
+};
+
+export function ContactForm() {
+    const [status, setStatus] = useState<Status>({
         submitted: false,
         submitting: false,
         info: { error: false, msg: null },
@@ -11,7 +17,7 @@ export default () => {
         email: '',
         message: '',
     });
-    const handleServerResponse = (ok: any, msg: any) => {
+    const handleServerResponse = (ok: boolean, msg: Status['info']['msg']) => {
         if (ok) {
             setStatus({
                 submitted: true,
@@ -28,7 +34,9 @@ export default () => {
             });
         }
     };
-    const handleOnChange = (e: any) => {
+    const handleOnChange = (
+        e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
+    ) => {
         e.persist();
         setInputs((prev) => ({
             ...prev,
@@ -40,15 +48,15 @@ export default () => {
             info: { error: false, msg: null },
         });
     };
-    const handleOnSubmit = (e: any) => {
+    const handleOnSubmit = (e: FormEvent) => {
         e.preventDefault();
-        setStatus((prevStatus: any) => ({ ...prevStatus, submitting: true }));
+        setStatus((prevStatus: Status) => ({ ...prevStatus, submitting: true }));
         axios({
             method: 'POST',
             url: process.env.FORM_ENDPOINT,
             data: inputs,
         })
-            .then((response) => {
+            .then(() => {
                 handleServerResponse(true, 'Thank you, your message has been submitted.');
             })
             .catch((error) => {
@@ -121,4 +129,4 @@ export default () => {
             </div>
         </section>
     );
-};
+}

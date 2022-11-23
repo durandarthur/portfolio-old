@@ -43,7 +43,7 @@ export function useCommands() {
     );
 
     function handleNewCommand(args: string[], idx: number) {
-        const { commandName, commandDesc, commandArgs, isSudo } = getCommandName(args);
+        const { commandName, commandArgs, isSudo } = getCommandName(args);
         const fullCommand = isSudo ? `sudo ${commandName}` : commandName;
         const commandFunctionOptions = { command: commandName };
 

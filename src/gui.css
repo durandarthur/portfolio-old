@@ -76,6 +76,14 @@ h2::selection {
     padding-block: 0 !important;
 }
 
+.vertical-item-row div {
+    pointer-events: none;
+}
+
+section {
+    pointer-events: none;
+}
+
 @media only screen and (max-width: 552px) {
     .timeline-item-title {
         display: none;

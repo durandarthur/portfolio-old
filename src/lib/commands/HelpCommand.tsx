@@ -1,11 +1,11 @@
-import { Command, CommandRenderOptions } from '../Command';
+import { Command } from '../Command';
 
 export default class HelpCommand extends Command {
     constructor() {
         super({ name: 'help', description: 'Liste les commandes disponibles.' });
     }
 
-    render({ commands, commandDescArr }: CommandRenderOptions): string | JSX.Element {
+    render(): string | JSX.Element {
         const commandList = [
             'bio',
             'contact',

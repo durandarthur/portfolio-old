@@ -29,7 +29,7 @@ export function Input({ entry, handleNewCommand }: Props) {
 
     React.useEffect(() => {
         input.handleInputAreaClick();
-    }, [entry]); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [entry]);
 
     function handlePasswordKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
         if (event.key === 'Enter') {

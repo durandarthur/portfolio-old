@@ -7,6 +7,7 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
         'plugin:@typescript-eslint/recommended',
     ],
     overrides: [],
@@ -16,7 +17,5 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: ['react', '@typescript-eslint'],
-    rules: {
-        'react/react-in-jsx-scope': 'off',
-    },
+    rules: {},
 };

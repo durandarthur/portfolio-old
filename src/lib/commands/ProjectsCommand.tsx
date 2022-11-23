@@ -9,8 +9,14 @@ export default class ProjectsCommand extends Command {
     render(): string | JSX.Element {
         return (
             <section>
-                {projects.map((project) => (
-                    <a href={project.link} target='_blank' className='underline'>
+                {projects.map((project, i) => (
+                    <a
+                        href={project.link}
+                        target='_blank'
+                        rel='noreferrer'
+                        className='underline'
+                        key={i}
+                    >
                         {project.title + '\n'}
                     </a>
                 ))}

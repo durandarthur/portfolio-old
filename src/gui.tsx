@@ -1,13 +1,13 @@
 import { Component } from 'react';
 import { Chrono } from 'react-chrono';
-import ContactForm from './components/ContactForm';
+import { ContactForm } from './components/ContactForm';
 import { entries, entriesTitles, projects, usedTechs } from './lib/data';
 
 export class Gui extends Component {
     render() {
         const cardText = document.getElementsByClassName('rc-card-text');
         for (let i = 0; i < cardText.length; i++) {
-            cardText[i].setAttribute('aria-expanded', 'true');
+            cardText[i].removeAttribute('aria-expanded');
         }
         document.onreadystatechange = () => {
             document
@@ -15,6 +15,15 @@ export class Gui extends Component {
                 .forEach((element) => {
                     element.removeAttribute('role');
                 });
+            document.querySelectorAll('[role="button"]').forEach((element) => {
+                element.setAttribute('role', 'presentation');
+            });
+            document.querySelectorAll('[tabindex]').forEach((element) => {
+                element.removeAttribute('tabindex');
+            });
+            document.querySelectorAll('section').forEach((element) => {
+                element.setAttribute('role', 'presentation');
+            });
         };
 
         return (

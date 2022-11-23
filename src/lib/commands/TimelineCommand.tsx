@@ -9,8 +9,8 @@ export default class TimelineCommand extends Command {
     render(): string | JSX.Element {
         return (
             <section>
-                {entries.map((entry) => (
-                    <div>
+                {entries.map((entry, i) => (
+                    <div key={i}>
                         <p>{'|\n|\n|\n'}</p>
                         <p>{entry.title}</p>
                         <p>{entry.cardTitle}</p>
