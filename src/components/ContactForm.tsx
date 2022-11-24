@@ -53,7 +53,7 @@ export function ContactForm() {
         setStatus((prevStatus: Status) => ({ ...prevStatus, submitting: true }));
         axios({
             method: 'POST',
-            url: import.meta.env.FORM_ENDPOINT,
+            url: import.meta.env.VITE_FORM_ENDPOINT,
             data: inputs,
         })
             .then(() => {
