@@ -57,7 +57,7 @@ export function ContactForm() {
             data: inputs,
         })
             .then(() => {
-                handleServerResponse(true, 'Thank you, your message has been submitted.');
+                handleServerResponse(true, 'Merci, votre message a été envoyé.');
             })
             .catch((error) => {
                 handleServerResponse(false, error.response.data.error);
